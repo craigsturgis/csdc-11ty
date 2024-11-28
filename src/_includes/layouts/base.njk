@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% if title %}{{ title }} - {% endif %}Craig Sturgis</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <header class="container mx-auto px-4 py-6">
+            <nav>
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="/" class="hover:text-blue-500">Home</a>
+                    </li>
+                    <li>
+                        <a href="/posts" class="hover:text-blue-500">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/archive" class="hover:text-blue-500">Archive</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-4 py-8">
+            {{ content | safe }}
+        </main>
+
+        <footer class="container mx-auto px-4 py-6 text-center">
+            <p>&copy; {{ page.date.getFullYear() }} Craig Sturgis</p>
+        </footer>
+    </body>
+</html>
