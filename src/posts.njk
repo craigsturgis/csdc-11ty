@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: Blog Posts
+permalink: /posts/
+---
+
+<div class="prose dark:prose-invert lg:prose-xl mx-auto">
+    <h1>Posts</h1>
+
+    {% if collections.posts %}
+        <ul>
+            {%- for post in collections.posts | reverse -%}
+                <li class="my-8">
+                    <a href="{{ post.url }}" class="text-xl font-semibold">{{ post.data.title }}</a>
+                    <div class="text-sm text-gray-500">
+                        {{ post.date | dateFilter }}
+                    </div>
+                    {% if post.data.description %}
+                        <p class="mt-2">{{ post.data.description }}</p>
+                    {% endif %}
+                </li>
+            {%- endfor -%}
+        </ul>
+    {% else %}
+        <p>No posts yet.</p>
+    {% endif %}
+</div>
