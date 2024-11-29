@@ -4,7 +4,14 @@ title: Home
 ---
 
 <div class="prose dark:prose-invert lg:prose-xl mx-auto">
-    <h1>Hi, I'm Craig.</h1>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 mb-8">
+        <img 
+            src="/img/Craig-Sturgis-headshot-2019.jpg" 
+            alt="Craig Sturgis headshot" 
+            class="w-48 h-48 rounded-full object-cover mx-auto md:mx-0"
+        >
+        <h1 class="text-2xl text-center md:text-left">Hi, I'm Craig.</h1>
+    </div>
 
     <section class="my-8">
         <p class="text-xl">I lead people to discover and deliver progress for customers in a way that grows and sustains the business we serve.</p>
@@ -13,7 +20,7 @@ title: Home
     </section>
 
     <section class="my-8">
-        <h2>Experience</h2>
+        <h2>Previous Experience</h2>
         {% from "macros/experience-item.njk" import experienceItem %}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {{ experienceItem(
