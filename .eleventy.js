@@ -1,4 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const markdownIt = require("markdown-it");
+const markdownItFootnote = require("markdown-it-footnote");
 
 module.exports = function (eleventyConfig) {
   // Add RSS plugin
@@ -38,6 +40,14 @@ module.exports = function (eleventyConfig) {
       return current === value;
     });
   });
+
+  // Create markdown-it instance with footnotes plugin
+  let markdownLibrary = markdownIt({
+    html: true,
+  }).use(markdownItFootnote);
+
+  // Set as library for markdown files
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   return {
     dir: {
