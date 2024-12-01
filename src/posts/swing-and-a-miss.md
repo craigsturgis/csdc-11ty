@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: Swing and a Miss
 date: 2015-10-12T02:56:00.000Z
 description: Haven Post Mortem
@@ -9,6 +9,7 @@ tags:
   - product
   - postmortem
 ---
+
 If you've been paying attention to some of my [recent writing][1] you may have noted a more downbeat and reflective tone. The open secret behind a lot of this reflection is that the business I co-founded has stopped operating and is shutting down.
 
 [1]: http://craigsturgis.com/2015/09/07/im-from-the-future/
@@ -25,9 +26,9 @@ I think calling attention to [lessons learned][2] when things don't go as planne
 
 [This is the End - Haven Post Mortem](https://medium.com/@askjbrown/this-is-the-end-haven-post-mortem-735f6b7e5938)
 
-It's a really succinct summary of the many factors that led to us not being able to make the business work. The biggest lesson not spelled out in that post that I've internalized is one that's really painful as a "product guy." It was a line I've heard many times but didn't really and truly understand until recently- *the market is way more important than the product.*
+It's a really succinct summary of the many factors that led to us not being able to make the business work. The biggest lesson not spelled out in that post that I've internalized is one that's really painful as a "product guy." It was a line I've heard many times but didn't really and truly understand until recently- _the market is way more important than the product._
 
- I can link the famous [Mark Andreessen post][3] but hopefully most have read it already. I did way back when, and didn't learn the lesson, but it's so blindingly obvious in retrospect.  Even the best product in a market that isn't good enough or isn't ready will still fail to generate a sustainable business.
+I can link the famous [Mark Andreessen post][3] but hopefully most have read it already. I did way back when, and didn't learn the lesson, but it's so blindingly obvious in retrospect. Even the best product in a market that isn't good enough or isn't ready will still fail to generate a sustainable business.
 
 [3]: http://pmarchive.com/guide_to_startups_part4.html
 

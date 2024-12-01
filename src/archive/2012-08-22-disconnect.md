@@ -1,6 +1,6 @@
 ---
-templateKey: archive-post
-title: "&#8220;Disconnect&#8221;"
+layout: post.njk
+title: "Disconnect"
 date: 2012-08-22T06:00:00.000Z
 description: >-
   unplugging

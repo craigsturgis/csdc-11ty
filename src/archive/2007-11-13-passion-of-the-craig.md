@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: "Passion of the Craig"
 date: 2007-11-13T05:00:00.000Z
 description: >-
@@ -10,10 +10,10 @@ tags:
   - reflection
 ---
 
-*(Note: This post originally appeared on my blogspot blog [here.][1] Datestamped footnotes with commentary may have been added for my own reflection and amusement.)*
+_(Note: This post originally appeared on my blogspot blog [here.][1] Datestamped footnotes with commentary may have been added for my own reflection and amusement.)_
 
- [1]: http://craigtsoandso.blogspot.com/2007/11/passion-of-craig.html
- 
+[1]: http://craigtsoandso.blogspot.com/2007/11/passion-of-craig.html
+
 Last weekend I was involved in one of those late night philosophical conversations that pop up occasionally, this one involved the subject of having a passion in life and what exactly that means. As a result of this conversation I realized that I don’t really have a capital P level ‘Passion’ as most people define it, and I also realized I’m perfectly fine with that.
 
 Part of the discussion revolved around how my friend and bandmate’s one driving focus is music- it’s all he wants to do with his life and monopolizes most of what he’s thinking about, and my drive in no single area is anywhere near as strong as that. There was some discussion of ‘passion envy,’ and while I do admire that sort of singular drive, and recognize that it’s responsible for the great art that I love so very much, I don’t necessarily wish I had it.
@@ -24,16 +24,16 @@ If anything I don’t have a ‘Passion’ because my passion is spread too thin
 
 The other, intertwined subject of this conversation was how we as individuals are going to be remembered. Without a driving passion to create something truly great, how am I going to leave a legacy? I think every philosophy has something to lend to the idea of leaving something behind for those still on this mortal coil after someone is shuffled off of it, and I put a lot of credence in the idea of making a mark and being remembered. However, my thinking on this in the past few years seems to be influenced by two quotes, the first of which is from a [speech][2] by Carl Sagan in regards to the picture at the top of this post:
 
- [2]: http://obs.nineplanets.org/psc/pbd.html
+[2]: http://obs.nineplanets.org/psc/pbd.html
 
- ![Pale Blue Dot][3]
+![Pale Blue Dot][3]
 
 > We succeeded in taking that picture [from deep space], and, if you look at it, you see a dot. That’s here. That’s home. That’s us. On it, everyone you ever heard of, every human being who ever lived, lived out their lives. The aggregate of all our joys and sufferings, thousands of confident religions, ideologies and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilizations, every king and peasant, every young couple in love, every hopeful child, every mother and father, every inventor and explorer, every teacher of morals, every corrupt politician, every superstar, every supreme leader, every saint and sinner in the history of our species, lived there on a mote of dust, suspended in a sunbeam.
 
 The second quote is one that one of my oldest friends likes to use that is actually old Honest Abe quoting an ancient eastern society, although [Wikipedia ][4]says the origin is attributed in a few different places:
 
- [3]: /img/pbd.jpg
- [4]: http://en.wikipedia.org/wiki/This_too_shall_pass
+[3]: /img/pbd.jpg
+[4]: http://en.wikipedia.org/wiki/This_too_shall_pass
 
 > It is said an eastern monarch once charged his wise men to invent a sentence, to be ever in view, and which should be true and appropriate in all times and situations. They presented him with the words, ‘And this, too, shall pass away.’ How much it expresses! How chastening in the hour of pride! How consoling in the depths of affliction!
 

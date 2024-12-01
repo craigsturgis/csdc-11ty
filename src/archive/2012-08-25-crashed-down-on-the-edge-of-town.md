@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: "Crashed Down on the Edge of Town"
 date: 2012-08-27T00:00:00.000Z
 description: >-
@@ -10,7 +10,7 @@ tags:
   - reflection
 ---
 
-I’m not sure how common this experience is, but I always forget that when I go on a vacation where I can truly relax, my body figures that out before my mind does. Before my mind can settle down, I crash, *hard.*
+I’m not sure how common this experience is, but I always forget that when I go on a vacation where I can truly relax, my body figures that out before my mind does. Before my mind can settle down, I crash, _hard._
 
 I’ve had this happen to me a number of times even back during school, but it’s still a blindside how much just letting go of stress can hit like a truck. I slept for 10 hours the first night, and it was glorious, but still walked around in a haze that entire next day. It’s only several days later that I’m feeling completely refreshed. But, it has reaffirmed my commitment to taking time away from the multitude of micro-stresses at least once a year even if I can’t physically go anywhere special. My vacation to Switzerland last year was amazing, but it was also a trip with lots of its own little travel stresses. I still plan on taking plenty of those types of trips in the future, but from now on a low key trip is going to have to be in the works to contrast it.
 

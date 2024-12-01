@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: Beware the Answer
 date: 2017-07-18T12:06:00.000Z
 description: "Nobody has it figured out. Be open to new ideas, but you're going to have to learn the hard way no matter what."
@@ -11,6 +11,7 @@ tags:
   - agile
   - lean
 ---
+
 ![Don't Smash Em](/img/stone-tablet-wide.jpg)
 
 In almost all fields, most people are searching for "the answer." The silver bullet, the cracked code. Product development is no different.
@@ -60,8 +61,8 @@ Put systems in place to make it hard to rationalize what you assumed before the 
 
 There is no answer. Learn, apply, and go fail until you get lucky. If you start lucky, celebrate and get back to work. For most, luck is fleeting.
 
-----
+---
 
 Have a story about when you thought you had the answer? Or someone you worked with? Tell me about it. cs@craigsturgis.com
 
-*(This post includes [affiliate links.](/affiliate-links/))*
+_(This post includes [affiliate links.](/affiliate-links/))_

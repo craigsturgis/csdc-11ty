@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: Core Values
 date: 2019-11-26T12:00:00.000Z
 description: >-
@@ -11,6 +11,7 @@ tags:
   - values
   - reflection
 ---
+
 <div class="columns">
 <div class="column is-3">
 
@@ -19,15 +20,15 @@ tags:
 </div>
 <div class="column is-9">
 
-When I think of core values, I think about the clearly articulated ideas that explain how people live their life, and what they aspire to. These are mine. 
+When I think of core values, I think about the clearly articulated ideas that explain how people live their life, and what they aspire to. These are mine.
 
 They have [evolved](https://github.com/craigsturgis/philosophy/commits/master/life/core-values.md) over time and I expect that to continue, just hopefully not too much.
 
 ### Every day is a great day.
 
-We only get so many days, and it’s tempting to live for some imagined future when things will be great. 
+We only get so many days, and it’s tempting to live for some imagined future when things will be great.
 
-I can’t control everything that happens to me and around me, but I can control my mindset, reaction, and whether I _do my best_[^1] to make each and every day a great one for myself, my family, and others. 
+I can’t control everything that happens to me and around me, but I can control my mindset, reaction, and whether I _do my best_[^1] to make each and every day a great one for myself, my family, and others.
 
 </div>
 </div>
@@ -42,9 +43,9 @@ At the same time, I want to work to be more open to receive love and trust in re
 
 The primary intrinsic motivation in my life has been to learn.
 
-I want to do my best to always be feeding that thirst for knowledge, applying the results, and sharing what I’ve learned with others. 
+I want to do my best to always be feeding that thirst for knowledge, applying the results, and sharing what I’ve learned with others.
 
-I support strong opinions, loosely held: having a point of view that is clear and direct, but also humble and open to learning from others with another point of view I hadn't considered. 
+I support strong opinions, loosely held: having a point of view that is clear and direct, but also humble and open to learning from others with another point of view I hadn't considered.
 
 I especially try to be open to perspectives from those with different backgrounds, experiences, and genetics from mine to make sure I’m learning as much as I can and staying mindful of biases I may not ever be able to fully offset.
 
@@ -64,8 +65,8 @@ I try to take action in ways that openly reflect my core beliefs and values. Obs
 
 The world is full of people who act in bad faith. The world I want to live in is one in which that is acknowledged but good faith is supported and rewarded. I want to do my best to walk the path I want others to walk and help make that world.
 
----- 
+---
 
-(This post contains an [affiliate link](https://craigsturgis.com/affiliate-links).) 
+(This post contains an [affiliate link](https://craigsturgis.com/affiliate-links).)
 
 [^1]: "Do my best" is a key feature of active questions, a concept I learned from Marshall Goldsmith's ["Triggers”](https://amzn.to/349xeD5) - One of my all time favorite personal development books if you're into that sort of thing.

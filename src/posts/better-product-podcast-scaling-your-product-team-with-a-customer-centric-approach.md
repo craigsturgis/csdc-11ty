@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: >-
   Better Product Podcast: Scaling Your Product Team with a Customer-Centric
   Approach
@@ -12,6 +12,7 @@ tags:
   - research
   - podcast
 ---
+
 <div class="columns">
 <div class="column"></div>
 <div class="column">
@@ -20,7 +21,7 @@ tags:
 <div class="column"></div>
 </div>
 
-I had a great time going on the Better Product Podcast. 
+I had a great time going on the Better Product Podcast.
 
 I got to talk with two people I have a lot of respect and admiration for about things that I really love doing and advocating for in digital product development.
 
@@ -30,11 +31,11 @@ The entire [Innovatemap](https://innovatemap.com/) team are pros and have been m
 
 ###Check out the episode:
 
-* [Main link and transcript](https://innovatemap.com/podcast/scaling-your-product-team-with-a-customer-centric-approach/)
-* [On Overcast](https://overcast.fm/+QtYTdI-Fk) (My personal favorite podcast player)
-* [Apple Podcasts](https://itunes.apple.com/us/podcast/better-product/id1451869239)
-* [Spotify](https://open.spotify.com/show/0G5ngjojeBAWqWqQHcDlLA)
-* [Google Play](https://play.google.com/music/m/Ivgqce5aechyvniugawrwqfhpxq?t=Better_Product)
+- [Main link and transcript](https://innovatemap.com/podcast/scaling-your-product-team-with-a-customer-centric-approach/)
+- [On Overcast](https://overcast.fm/+QtYTdI-Fk) (My personal favorite podcast player)
+- [Apple Podcasts](https://itunes.apple.com/us/podcast/better-product/id1451869239)
+- [Spotify](https://open.spotify.com/show/0G5ngjojeBAWqWqQHcDlLA)
+- [Google Play](https://play.google.com/music/m/Ivgqce5aechyvniugawrwqfhpxq?t=Better_Product)
 
 If you find it interesting or useful you should subscribe, there are tons of great guests and insight from them and the Innovatemap team.
 

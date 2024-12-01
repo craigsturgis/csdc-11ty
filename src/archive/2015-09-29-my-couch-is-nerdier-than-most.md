@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: My Couch is Nerdier Than Most
 date: 2015-09-29T03:00:00.000Z
 description: iPad ergonomics and football
@@ -9,6 +9,7 @@ tags:
   - gadgets
   - ergonomics
 ---
+
 Having a laptop or a tablet on the couch while watching TV is of course not a new thing. As soon as portable computers shifted from something that looked like a [suitcase][1] to the [trackball sporting beasts][2] of the early 90s, people have been participating in the dual screen experience. Lately however I've taken a new approach to partially reclined computing that I've been enjoying.
 
 [1]: http://resource.mmgn.com/Gallery/normal/Commodore-SX-64-1041428.jpg
@@ -31,7 +32,7 @@ That, and I wanted to be able to quickly and easily type incomprehensible gibber
 [^2]: One of the last production runs panasonic did :(
 
 ##It's alive
-On a whim, I MacGuyvered a solution from things I mostly had lying around. The most important thing for me is being able to look at a display at eye level so I can avoid hunching over. 
+On a whim, I MacGuyvered a solution from things I mostly had lying around. The most important thing for me is being able to look at a display at eye level so I can avoid hunching over.
 
 So, starting with my beloved [iPad Air 2][3] I mostly use to read, I acquired a [cheap adjustable arm][4], attached it to our always handy [C-table][5], and paired up a salvaged [bluetooth keyboard][6]. Then, it was off to the comfortable typing races, with the added bonus of being able to quickly and easily dissassemble and stash away my weird looking monstrosity.
 
@@ -47,7 +48,7 @@ So, starting with my beloved [iPad Air 2][3] I mostly use to read, I acquired a 
 The thing that really makes all this work is the expanded keyboard support for iPads in the newly released iOS 9. Just the ability to cmd+tab between apps and cmd+space spotlight searches almost makes me feel like I'm right at home on a mac. It's not quite 100% there, but it's way better than other attempts I've made in the past. Often I prefer the more constrained approach to multitasking, especially when I am most likely already doing so by looking at a big screen in the first place.
 
 ##But what does it _do_
-I won't lie, this is mostly a thing that will get heavy usage for chat slinging and checking fantasy football scores on fall Sundays, but I am intrigued at having another set of tools at hand to write with. 
+I won't lie, this is mostly a thing that will get heavy usage for chat slinging and checking fantasy football scores on fall Sundays, but I am intrigued at having another set of tools at hand to write with.
 
 Right now it would be hard to make a complete end to end post to this site due to the [way it's built][11], but coming up with an easier process could be worth exploring. Either way I can type, and stringing words together is 99% of the battle anyway.
 
@@ -56,6 +57,7 @@ Right now it would be hard to make a complete end to end post to this site due t
 Another pipe dream is being able to write up some quick code from a shell or even something like [Coda for iOS][8], but I'm probably way too picky make that work. But who knows, obsessing about only using just the right tools is something I'm trying to do less[^3].
 
 [8]: https://panic.com/coda-ios/
+
 [^3]: Which I've of course proven by writing 800 words about some tools I use.
 
 I'm also interested in trying more things I would only consider doing on a traditional computer with this neutered robo-giraffe setup. Some [interesting][9] [people][10] seem to like creating things mostly on iPads. Maybe I will too. Clearly I don't mind looking silly in the process.
@@ -63,4 +65,4 @@ I'm also interested in trying more things I would only consider doing on a tradi
 [9]: http://www.relay.fm/cortex
 [10]: https://www.macstories.net/
 
-*(This post includes [affiliate links.](/affiliate-links/))*
+_(This post includes [affiliate links.](/affiliate-links/))_

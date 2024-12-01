@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: "Schneier: The Value of Privacy"
 date: 2013-09-16T04:36:00.000Z
 description: >-
@@ -14,11 +14,11 @@ I recently came across a link to a [post from 2006][1] from security writer Bruc
 
 [1]: https://www.schneier.com/blog/archives/2006/05/the_value_of_pr.html
 
->"If you aren't doing anything wrong, what do you have to hide?"
+> "If you aren't doing anything wrong, what do you have to hide?"
 
->Some clever answers: "If I'm not doing anything wrong, then you have no cause to watch me." "Because the government gets to define what's wrong, and they keep changing the definition." "Because you might do something wrong with my information." My problem with quips like these -- as right as they are -- is that they accept the premise that privacy is about hiding a wrong. It's not. Privacy is an inherent human right, and a requirement for maintaining the human condition with dignity and respect.
+> Some clever answers: "If I'm not doing anything wrong, then you have no cause to watch me." "Because the government gets to define what's wrong, and they keep changing the definition." "Because you might do something wrong with my information." My problem with quips like these -- as right as they are -- is that they accept the premise that privacy is about hiding a wrong. It's not. Privacy is an inherent human right, and a requirement for maintaining the human condition with dignity and respect.
 
->Two proverbs say it best: Quis custodiet custodes ipsos? ("Who watches the watchers?") and "Absolute power corrupts absolutely."
+> Two proverbs say it best: Quis custodiet custodes ipsos? ("Who watches the watchers?") and "Absolute power corrupts absolutely."
 
 The whole post is not very long and very much worth reading.
 

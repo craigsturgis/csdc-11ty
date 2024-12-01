@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: "Prost"
 date: 2014-05-23T01:39:55.000Z
 description: >-
@@ -11,7 +11,6 @@ tags:
   - personal
 ---
 
-
 Many people at times had difficulty understanding Grandpa when he spoke. Not necessarily because of his accent, but also because he had a knack for saying things people had to think about a bit.
 
 There’s a famous story in our family in which before a birthday celebration he shared with my sister Jessica, he rose to speak and began simply saying “Today is the day...of 100!” Seeing some confused looks I explained that we were celebrating his 78th birthday and her 22nd birthday and those together equaled 100- it made sense to me.
@@ -21,9 +20,9 @@ His taste for adventure took him from Switzerland to his new home in these Unite
 
 His acts of kindness and charity were frequent and not small. He gave to a wide range of charities, especially those that help the less fortunate and of course preserve the environment he remained fascinated with until now. His generosity and love allowed us to have a family vacation every year on a beautiful island that many of us call home now.
 
-Looking back, it’s funny how nobody else I knew when they went to visit their grandparents was graded on how well they made the bed or was pitted against their cousin in an amateur olympic decathlon including such events as swimming, running, and indigenous blowgun target shooting. 
+Looking back, it’s funny how nobody else I knew when they went to visit their grandparents was graded on how well they made the bed or was pitted against their cousin in an amateur olympic decathlon including such events as swimming, running, and indigenous blowgun target shooting.
 
-But, nobody else I knew helped put together a water sensing vent closing mechanism. Or flew down an underground tunnel inside a box pulled by a lawn tractor. Nobody else I knew had a Grandpa who wanted them to build him a computer with a “video telephone” years before skype was a thing. Or shot targets with a *blowgun*. 
+But, nobody else I knew helped put together a water sensing vent closing mechanism. Or flew down an underground tunnel inside a box pulled by a lawn tractor. Nobody else I knew had a Grandpa who wanted them to build him a computer with a “video telephone” years before skype was a thing. Or shot targets with a _blowgun_.
 
 The list goes on and on, and all those experiences helped encourage and inspire so many of the passions I hope to continue on in my life and share with others as he did. I can only hope to match his kindness and constant adventuring. On the other hand, we might think that we all should hope not to be as stubborn, but I do think there was a lesson in his famous story about there being “no such orders in the Swiss Army.”
 
