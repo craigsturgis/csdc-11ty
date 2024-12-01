@@ -49,6 +49,12 @@ module.exports = function (eleventyConfig) {
   // Set as library for markdown files
   eleventyConfig.setLibrary("md", markdownLibrary);
 
+  // Watch for Tailwind CSS changes
+  eleventyConfig.addWatchTarget("./src/styles/");
+
+  // Make sure styles are being copied to output
+  eleventyConfig.addPassthroughCopy("_site/styles");
+
   return {
     dir: {
       input: "src",
