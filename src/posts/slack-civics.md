@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: Slack Civics
 date: 2016-03-28T11:33:00.000Z
 description: Ways to Group Chat Without Sweating Too Much
@@ -9,6 +9,7 @@ tags:
   - tech in operations
   - culture
 ---
+
 ![Everybody can't just yell at once](/img/discurso_funebre_pericles.png)
 
 Recently as Slack has continued its rise as a primary tool for people to communicate, there's been a bit of a backlash against some of the behaviors that result.
@@ -27,7 +28,7 @@ Having recently shifted from being one of the drivers of a Slack centered, ["wor
 
 [4]: http://www.panozzaj.com/blog/2015/10/25/work-as-if-remote/
 
-Any community of 300+ inside of a broader organization of 1500+ is going to behave differently from a community of 10 regardless of their tools, but having come from a place where I think group chat worked really well [for the most part][5] , I have taken to stumping for something that's more like a set of civic duties to be aware of that make for a better Slack [society][6]. 
+Any community of 300+ inside of a broader organization of 1500+ is going to behave differently from a community of 10 regardless of their tools, but having come from a place where I think group chat worked really well [for the most part][5] , I have taken to stumping for something that's more like a set of civic duties to be aware of that make for a better Slack [society][6].
 
 _(In the interest of brevity, I write Slack when almost all of these things also apply to other similar group chat tools like HipChat, Flowdock, IRC, etc.)_
 
@@ -83,6 +84,7 @@ The thing about communicating this way is that it is a relatively new experience
 Otherwise, they may stick to the muscle memory of meetings and emails or using it like any other IM style tool. Slack does a good job of nudging people, but it still requires a helpful civic culture to help patiently guide people into the right habits and give directions to the right places, maybe even with a deliberate onboarding process to help, just like introducing someone to a new physical office culture.
 
 ## Oh, and robots
+
 Some of the most fun can be had by leveraging slackbot, custom webhooks, and even [hubot][7] to add random fun touches, do all the janitorial work like archiving inactive channels, and to pipe in custom information specific to your codebase and operations. It can also be a good steam valve for developers and other people who write a bit of code to create something to share which might have culture value if not direct work value.
 
 [7]: https://hubot.github.com/

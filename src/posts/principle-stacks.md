@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: Principle Stacks and Politics
 date: 2020-10-15T10:10:00.000Z
 description: A what, how, and why of principle stacks focusing in on political principles
@@ -8,6 +8,7 @@ featuredimage: /img/principle-stacks.jpg
 tags:
   - what-im-for
 ---
+
 ![Typical argument: a dramatization](/img/typical-argument.jpg)
 
 ## Silent Craig
@@ -16,14 +17,14 @@ My default reaction when politics comes up in conversation is to be uncomfortabl
 
 I’m still working on understanding why I react this way. It’s part of everyone’s responsibility in a system like ours to engage each other. It's the only way to make the best choice on who runs the government on our behalf. I think the main reason I hesitate is that the topics that dominate political conversation seem so surface level. They're more reactive slogans or memes than well thought out positions driven by clear principles.
 
-The outcomes of most political discussions seem to be: 
+The outcomes of most political discussions seem to be:
 
-1. Feeling great about how strongly we agree and how crazy "the other side” is. 
+1. Feeling great about how strongly we agree and how crazy "the other side” is.
 2. Talking[^1] past each other, many times to the point of ruining what should be meaningful relationships.
 
 [^1]: And / or yelling. Mostly Yelling.
 
-I don’t have much interest in either of those. What I want is to get to the heart of what the person I’m talking to is *for* that informs their opinions on the issues of the day.
+I don’t have much interest in either of those. What I want is to get to the heart of what the person I’m talking to is _for_ that informs their opinions on the issues of the day.
 
 But, that’s a conversation with mutual give and take that typically needs long stretches of time and a willingness to engage. Even if the other person is open to it and free to spend the time, it takes a lot of emotional and intellectual effort. So, nine times out of ten I change the subject or keep my mouth shut. Which also doesn’t make me feel great.
 
@@ -53,15 +54,15 @@ One thing I'm trying to get better at is making an effort to see if there's a ch
 
 [^3]: This does not mean literally just responding with "why?" like a 3 year old.
 
-We have serious problems to work out amongst ourselves, no matter what the results of this upcoming election are. It seems likely to get worse before we can successfully make it better. I hope not. We're on the brink of an accelerating increase in widespread suffering. Our odds of preventing that get much smaller if we can’t find more common ground to stand on. 
+We have serious problems to work out amongst ourselves, no matter what the results of this upcoming election are. It seems likely to get worse before we can successfully make it better. I hope not. We're on the brink of an accelerating increase in widespread suffering. Our odds of preventing that get much smaller if we can’t find more common ground to stand on.
 
 I hope that more people can use ideas like the principle stack as a shortcut to get to the root of issues rather than sticking to the surface level. I'm going to try. If we engage with what the real differences in principle are, we stand a much better chance at a workable path forward.
 
 ## Stacks and voting
 
-Right near the top of my stack is the principle of [working in good faith](/posts/core-values) within the imperfect system we have. Trying to make it better for all of us over tearing it down or finding further ways to undermine it to get what I want. 
+Right near the top of my stack is the principle of [working in good faith](/posts/core-values) within the imperfect system we have. Trying to make it better for all of us over tearing it down or finding further ways to undermine it to get what I want.
 
-Because of that, I’m happily pulling the lever *for* Joe Biden ahead of November 3rd. I don’t think one leadership change at the top will solve all of our problems. Far from it. But, I’ve concluded based on his actions that Biden will try to strengthen the system to help us work out our differences in a way that our current president has demonstrated he will not. 
+Because of that, I’m happily pulling the lever _for_ Joe Biden ahead of November 3rd. I don’t think one leadership change at the top will solve all of our problems. Far from it. But, I’ve concluded based on his actions that Biden will try to strengthen the system to help us work out our differences in a way that our current president has demonstrated he will not.
 
 If you think that's crazy, we're probably not prioritizing the same things. Still, I’m guessing there’s a good chance we probably have more principles in common than we don’t. If the situation is right, I'd be curious to have a conversation about how our principle stacks are different and why.
 

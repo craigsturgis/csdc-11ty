@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: "I Wish I Could Save Her In Some Sort of Time Machine"
 date: 2007-09-17T05:00:00.000Z
 description: >-
@@ -10,16 +10,16 @@ tags:
   - review
 ---
 
-*(Note: This post originally appeared on my blogspot blog [here.][1] Datestamped footnotes with commentary may have been added for my own reflection and amusement.)*
+_(Note: This post originally appeared on my blogspot blog [here.][1] Datestamped footnotes with commentary may have been added for my own reflection and amusement.)_
 
- [1]: http://craigtsoandso.blogspot.com/2007/09/i-wish-i-could-save-her-in-some-sort-of.html
+[1]: http://craigtsoandso.blogspot.com/2007/09/i-wish-i-could-save-her-in-some-sort-of.html
 
 [![In the Aeroplane Over the Sea][2]][3]
 
 Jeff Mangum is one of the most bizarre individuals this world has ever seen, and while there are many truly great songwriters out there who have made and continue to make great music, something clicked between him and his band Neutral Milk Hotel sometime in 1997-98 that produced what I think is the greatest single musical [album][3] ever made.
 
- [2]: /img/nmh.jpg
- [3]: http://www.amazon.com/dp/B000U7SN8O/?tag=craigsturgisc-20
+[2]: /img/nmh.jpg
+[3]: http://www.amazon.com/dp/B000U7SN8O/?tag=craigsturgisc-20
 
 Sometime around 2003ish, I was in the car with my friend Jeff and he told me I had to hear this cd- that the guy had the best voice he had ever heard and the album was incredible. Having gotten the benefit of some good musical advice from the guy in the past I was listening with an open mind, and upon first listen it seemed to be just some guy who definitely did not have that great a voice singing over an acoustic guitar and some random mess of a horn section. Frankly, I thought it sucked, and so In The Aeroplane Over The Sea got mentally shelved in the ‘too out there for me’ musical category.
 
@@ -29,12 +29,12 @@ Jeff’s relatively simplistic, sometimes layered acoustic guitar playing is the
 
 Obviously the guy is a little out there, as someone who claims to have vivid and meaningful visions frequently, and who claimed that the closet he slept in for a year at the Pet Sounds studio was haunted, but I’m almost inclined to believe him as a result of his ability to translate the bizarre contents of his brain so well into song. Either way the (even minor) spotlight was not his thing, as since this album he has all but disappeared completely from making music other than a collection of Bulgarian folk music a few years back[^1].
 
- [^1]: Mangum has reappeared in recent years and is even playing NMH shows on occasion (08/2013)
+[^1]: Mangum has reappeared in recent years and is even playing NMH shows on occasion (08/2013)
 
 If the record itself has a theme at all, it seems to be mostly obsessed with the idea of the spirit of Anne Frank, and that sort of innocence, love, and hope in the face of incredible tragedy and horror. All of the songs seem to be inspired by bizarre visions, and from the shorter simple songs like the opening track The King of Carrot Flowers Pt. 1 to the 8 minute epic Oh, Comely Mangum seems to be speaking some other language in plain english, but somehow I understand some of it and fill in the blanks myself. Sigur Ros produces a similar effect, mainly because they actually are speaking another language (and on one album a language they just made up). But, nothing quite measures up to this 40 minutes for me, or even comes that close.
 
 Every time I try to describe this record to people I usually just get edgewise stares, so I think even if I win no one over, at least maybe I can get some people to listen to a song I think is the most accessible, and possibly one of the best songs ever written. It also happens to share the title of the album- if you can’t find it to listen to it, I’ll find a way to play it for you.
 
-*(This post includes an [affiliate link.][4])*
+_(This post includes an [affiliate link.][4])_
 
- [4]: /affiliate-links/
+[4]: /affiliate-links/

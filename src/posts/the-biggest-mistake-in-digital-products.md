@@ -1,4 +1,5 @@
 ---
+layout: post.njk
 templateKey: post
 title: The Biggest Mistake in Digital Products
 date: 2021-09-01T11:00:00.000Z
@@ -9,6 +10,7 @@ featuredimage: /img/rake-run-web.png
 tags:
   - product
 ---
+
 ![(sideshow bob grumble)](/img/rake-run-web.png "This is gonna be great!")
 
 ## A Validation Story
@@ -37,7 +39,7 @@ I was so confused. People kept telling us it was such a good idea! Why wasn't th
 
 The biggest mistake in digital product development is believing the specific thing you’re building is "validated" when it's not.
 
-That’s not to say that the *vision* you have won't succeed if you can make it a reality. It might even be transformational.
+That’s not to say that the _vision_ you have won't succeed if you can make it a reality. It might even be transformational.
 
 But, building a sufficiently valuable subset of your vision is harder and will probably take much longer than you think.
 
@@ -49,17 +51,17 @@ I really feel for everyone grinding away and doing their best trying to make a b
 
 So many forces are pushing energy away from ongoing discovery and toward focusing on just building until things are “ready.”
 
-The assumption that leadership knows *exactly* what to build is hard to dislodge, especially when leaders believe it.
+The assumption that leadership knows _exactly_ what to build is hard to dislodge, especially when leaders believe it.
 
 Here are some common phrases that should set off alarm bells:
 
-* “Our customers are telling us what they want. We just have to go build it!”
-* Potential customer: “That sounds really great. Let me know when it’s ready and I’ll take a look.”
-* “I just met with (dream prospect) and they said if we build (feature x,y,z), they’ll sign!”
+- “Our customers are telling us what they want. We just have to go build it!”
+- Potential customer: “That sounds really great. Let me know when it’s ready and I’ll take a look.”
+- “I just met with (dream prospect) and they said if we build (feature x,y,z), they’ll sign!”
 
 None of these things are bad in and of themselves. The mistake is when they lead you to stop the ongoing process that uncovers the specifics that can make those statements true.
 
-You need some amount of luck to get the details right no matter what. To make more of your own luck, the right details have to be *discovered* alongside customers and users.
+You need some amount of luck to get the details right no matter what. To make more of your own luck, the right details have to be _discovered_ alongside customers and users.
 
 What people **do** is worth so much more than what they say. It’s important to get in position to observe what they actually do as early and often as you can.
 
@@ -77,7 +79,7 @@ Given that, how does it change your approach?
 
 Instead of just planning out features to build, think in terms of the specific, measurable goal you’re trying to accomplish with each feature. This will give you and your team room to find multiple possible paths to that goal. Do your best not to focus on more than one goal at a time.
 
-Get something interactive in front of your target market as soon as you can. Do it even if it’s just to a small private group, and even if it’s all just people behind the scenes and not scalable technology. 
+Get something interactive in front of your target market as soon as you can. Do it even if it’s just to a small private group, and even if it’s all just people behind the scenes and not scalable technology.
 
 The most important thing is learning whether it’s useful or at least promising to your target customer. If you can’t get people who aren't already your biggest fans to care or engage regularly, you’re in the danger zone.
 
@@ -97,7 +99,7 @@ The challenge is that having the wrong kinds of conversations can give you what 
 
 More formal [switch interviews](https://www.revealed.market/) and [continuous discovery](https://www.producttalk.org/2021/05/continuous-discovery-habits/) practices are more effort to learn, but can pay big dividends.
 
-Whatever you do, don’t avoid including key team members from all disciplines when having and especially digesting the customer conversations you have. 
+Whatever you do, don’t avoid including key team members from all disciplines when having and especially digesting the customer conversations you have.
 
 Including members from design, development, etc. often uncovers many more insights vs. trying to translate your own takeaways into “requirements”. Without that, a ton of important context gets lost for the people crafting the actual solutions.
 
@@ -105,7 +107,7 @@ Including members from design, development, etc. often uncovers many more insigh
 
 It’s easy to figure out whether you’re making the revenue and the margins you need to hit growth and profitability targets.
 
-The problem with the financial metrics is that they happen as the result of work that was done in the past. Maybe a *long* time in the past.
+The problem with the financial metrics is that they happen as the result of work that was done in the past. Maybe a _long_ time in the past.
 
 What can you measure to help you know whether you’re on the right track right now?
 
@@ -113,7 +115,7 @@ Most often, “leading” indicators of success won’t be obvious at first. Fin
 
 Plan for the time to update measurements as you learn more over time and find where the correlations are. Being able to measure success indicators should be as core to your product development process as testing that a new feature is working.
 
-Again, what your target customers **do** is a much more important validation signal than what they *say* they will do. 
+Again, what your target customers **do** is a much more important validation signal than what they _say_ they will do.
 
 How can you build in such a way that you can measure actions and not words sooner?
 
@@ -141,6 +143,6 @@ Find ways to feed your optimism without believing too much of your own hype. Nev
 
 Good luck!
 
-- - -
+---
 
 Building something ambitious and want my help increasing your odds of success and avoiding this and other mistakes? [Let's chat.](https://savvycal.com/craigsturgis/chat-from-site)

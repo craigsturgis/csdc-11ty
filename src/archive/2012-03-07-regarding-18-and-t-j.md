@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: "Regarding #18 and T.J."
 date: 2012-03-07T04:00:00.000Z
 description: >-
@@ -10,7 +10,7 @@ tags:
   - reflection
 ---
 
-*(Note: This post originally appeared on the now defunct craigtsoandso.com. Datestamped footnotes with commentary may have been added for my own reflection and amusement.)*
+_(Note: This post originally appeared on the now defunct craigtsoandso.com. Datestamped footnotes with commentary may have been added for my own reflection and amusement.)_
 
 Today sucks. I’m not going to rhapsodize about Peyton Manning’s time in Indianapolis, or angrily vent or try to be the voice of reason, or wonder why we care so much about a silly thing like sports here, although I have been doing all of those things since the writing on the wall became a reality last night.  I’ll leave that for other people.
 
@@ -26,4 +26,4 @@ T.J. lived several more years on that farm, happy. We visited many times, and be
 
 It may seem ridiculous, but I’m feeling a very similar string of emotions today[^1]. Godspeed 18.
 
- [^1]: The whole event really was the impetus for reexamining why I care so much about sports, and then realizing I don't really. I love going to games and watching sports, but I really have let go of a lot of the obsession. It also hasn't hurt that ESPN has attempting to Skip Bayless their way to ruining everyone's enjoyment of sports. Thankfully they also let Grantland and now 538 do their own thing. (08/2013) 
+[^1]: The whole event really was the impetus for reexamining why I care so much about sports, and then realizing I don't really. I love going to games and watching sports, but I really have let go of a lot of the obsession. It also hasn't hurt that ESPN has attempting to Skip Bayless their way to ruining everyone's enjoyment of sports. Thankfully they also let Grantland and now 538 do their own thing. (08/2013)

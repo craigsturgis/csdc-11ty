@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: Great Products Need Balance
 date: 2016-05-11T02:26:00.000Z
 description: "It's more than business, It's more than experience, It's more than what you can sustainably build"
@@ -9,11 +9,12 @@ tags:
   - product
   - tech in operations
 ---
+
 One of those most ingenious features of modern, rule of law governments is how power is separated and provides a system of checks and balances. It's a fundamental assumption that different branches have to remain balanced over time to keep a state functioning well without authoritarianism. Carrying that concept into product development could be incredibly valuable for companies as they try to make and keep their products great.
 
 Uber, AirBnB, and Slack are just a few of the most prominent examples of how evolving from a "requirements" vs. technology approach to proudly experience driven products can be transformative. Not only to the markets they operate in, but to everyone's expectations of how products and services should work in a world where every company needs to be a technology company.
 
-Experience driven product development is a huge step forward, but doesn't fully explain what makes these and many other products truly great. It's the companies whose products truly *balance* the demands of great customer experience, scalable technology, and driving a sustainable business that grow and maintain greatness. This is true of bootstrapped, seed stage, high growth, and public company products and services.
+Experience driven product development is a huge step forward, but doesn't fully explain what makes these and many other products truly great. It's the companies whose products truly _balance_ the demands of great customer experience, scalable technology, and driving a sustainable business that grow and maintain greatness. This is true of bootstrapped, seed stage, high growth, and public company products and services.
 
 ![Check out my drawing skillz][1]
 

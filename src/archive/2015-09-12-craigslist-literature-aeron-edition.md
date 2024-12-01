@@ -1,6 +1,6 @@
 ---
-templateKey: archive-post
-title: 'Craigslist literature: Aeron Edition'
+layout: post.njk
+title: "Craigslist literature: Aeron Edition"
 date: 2015-09-12T16:41:00.000Z
 description: >-
   Wounded Aeron Chair Seeks A Better, More Mechanically Inclined Partner - $200
@@ -10,6 +10,7 @@ featuredimage: /img/aeron.jpg
 tags:
   - craigslist
 ---
+
 ![I'm a sad, broken wreck of a chair.](/img/aeron.JPG)
 
 I used to be so majestic.

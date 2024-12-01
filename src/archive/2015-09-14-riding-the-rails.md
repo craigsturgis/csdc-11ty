@@ -1,5 +1,5 @@
 ---
-templateKey: archive-post
+layout: post.njk
 title: Riding the Rails
 date: 2015-09-14T11:03:00.000Z
 description: But backwards
@@ -9,6 +9,7 @@ tags:
   - technology
   - learning
 ---
+
 Recently I've been getting the opportunity to work with / help out some software companies that base their tech stack on rails. Now, languages and frameworks are all just tools, and one doesn't necessarily have to be an expert in the tools to be able to make a material contribution to shipping a product.
 
 But, in order to truly be helpful, one should probably be able to "[swing a hammer][3]" and have a good grasp on the mechanics and most of all the philosophy and approach to leveraging the tools.

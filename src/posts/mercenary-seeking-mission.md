@@ -1,5 +1,5 @@
 ---
-templateKey: post
+layout: post.njk
 title: Mercenary Seeking Mission
 date: 2021-06-23T10:52:00.000Z
 description: "What I'm doing with this next phase of my career          "
@@ -10,6 +10,7 @@ tags:
   - career
   - purpose
 ---
+
 ![This is the way](/img/mandalorian.jpg "The Mandalorian")
 
 The Mandalorian is obligated to reunite the baby with its own kind.
@@ -30,11 +31,11 @@ In digital product development, you stand the best chance of success if you cult
 
 But, there are times when hiring a mercenary makes sense. I want to be the first choice a leader hires to help them get to their next milestone. To get them off to a better start or to help assemble, expand, and support their team of missionaries.
 
-I’ve spent more than 15 years in tech gaining tons of depth in digital product development plus [range](https://www.amazon.com/Range-Generalists-Triumph-Specialized-World/dp/0735214484) across all the other business disciplines. I've built, contributed to, and managed products in multiple types of markets and a couple of different industries. 
+I’ve spent more than 15 years in tech gaining tons of depth in digital product development plus [range](https://www.amazon.com/Range-Generalists-Triumph-Specialized-World/dp/0735214484) across all the other business disciplines. I've built, contributed to, and managed products in multiple types of markets and a couple of different industries.
 
 I want to leverage my experience, my strength in learning quickly, and ability to translate and communicate to help leaders and teams move forward in a better way.
 
-Digital product development is ***hard***. Many common models for developing them are a mismatch for what so many organizations really need and don't align everyone's incentives well. Even if you have access to tons of talent, funding, and expertise you need a whole lot of luck to succeed.
+Digital product development is **_hard_**. Many common models for developing them are a mismatch for what so many organizations really need and don't align everyone's incentives well. Even if you have access to tons of talent, funding, and expertise you need a whole lot of luck to succeed.
 
 There are ways to improve your odds though.
 
