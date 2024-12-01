@@ -1,9 +1,51 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 ---
-<article class="prose dark:prose-invert lg:prose-xl mx-auto">
-    <h1>{{ title }}</h1>
-    <time datetime="{{ page.date | dateToISO }}">{{ page.date | dateToString }}</time>
 
-    {{ content | safe }}
+<article class="max-w-prose mx-auto px-4 sm:px-6 py-8">
+    <header class="mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-2 dark:text-white">{{ title }}</h1>
+
+        <div class="text-gray-600 dark:text-gray-400 mb-4">
+            <time datetime="{{ page.date | htmlDateString }}">
+                {{ page.date | readableDate }}
+            </time>
+            {% if tags %}
+                <div class="mt-2">
+                    {% for tag in tags %}
+                        {% if tag != "posts" %}
+                            <span class="inline-block bg-gray-100 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">#{{ tag }}</span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="prose prose-lg prose-blue dark:prose-invert max-w-none">
+        {{ content | safe }}
+    </div>
+
+    <footer class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <nav class="flex justify-between">
+            {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+            {%- set nextPost = collections.posts | getNextCollectionItem %}
+
+            <div>
+                {% if previousPost %}
+                    <a href="{{ previousPost.url }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
+            ← {{ previousPost.data.title }}
+                    </a>
+                {% endif %}
+            </div>
+
+            <div>
+                {% if nextPost %}
+                    <a href="{{ nextPost.url }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
+                        {{ nextPost.data.title }} →
+          </a>
+                {% endif %}
+            </div>
+        </nav>
+    </footer>
 </article>
