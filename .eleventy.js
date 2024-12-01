@@ -1,6 +1,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const markdownItFootnote = require("markdown-it-footnote");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   // Add RSS plugin
@@ -50,10 +51,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Watch for Tailwind CSS changes
-  eleventyConfig.addWatchTarget("./src/styles/");
+  eleventyConfig.addWatchTarget("./src/css/");
 
-  // Make sure styles are being copied to output
-  eleventyConfig.addPassthroughCopy("_site/styles");
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "dd LLL yyyy"
+    );
+  });
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+  });
 
   return {
     dir: {
