@@ -7,21 +7,19 @@ permalink: /posts/
 <div class="prose dark:prose-invert lg:prose-xl mx-auto">
     <h1>Posts</h1>
 
+    {% from "macros/post-card.njk" import postCard %}
+
     {% if collections.posts %}
-        <ul>
+        <div class="space-y-8 mt-4">
             {%- for post in collections.posts | reverse -%}
-                <li class="my-8">
-                    <a href="{{ post.url }}" class="text-xl font-semibold">{{ post.data.title }}</a>
-                    <div class="text-sm text-gray-500">
-                        {{ post.date | dateFilter }}
-                    </div>
-                    {% if post.data.description %}
-                        <p class="mt-2">{{ post.data.description }}</p>
-                    {% endif %}
-                </li>
+                {{ postCard(post) }}
             {%- endfor -%}
-        </ul>
+        </div>
     {% else %}
         <p>No posts yet.</p>
     {% endif %}
+
+    <div class="mt-8 text-center">
+        <a href="/archive/" class="text-blue-600 dark:text-blue-400 hover:underline">View Complete Archive →</a>
+    </div>
 </div>

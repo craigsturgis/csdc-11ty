@@ -1,0 +1,36 @@
+{% macro postCard(post) %}
+    <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden max-w-3xl mx-auto">
+        {% if post.data.featuredimage %}
+            <div class="relative h-48 sm:h-64 md:h-72 lg:h-96">
+                <img 
+                    src="{{ post.data.featuredimage }}" 
+                    alt="{{ post.data.imageAlt or post.data.title }}"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    srcset="{{ post.data.featuredimage }}?width=400 400w,
+                            {{ post.data.featuredimage }}?width=800 800w,
+                            {{ post.data.featuredimage }}?width=1200 1200w"
+                >
+            </div>
+        {% endif %}
+        <div class="p-4 sm:p-6 md:p-8">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-2">
+                <a href="{{ post.url }}" class="hover:text-blue-600 dark:hover:text-blue-400">
+                    {{ post.data.title }}
+                </a>
+            </h3>
+            <time class="text-sm text-gray-500 dark:text-gray-400 block mb-3">
+                {{ post.date | dateFilter }}
+            </time>
+            {% if post.data.description %}
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    {{ post.data.description }}
+                </p>
+            {% endif %}
+            <a href="{{ post.url }}" class="text-blue-600 dark:text-blue-400 hover:underline">
+                Read more →
+            </a>
+        </div>
+    </article>
+{% endmacro %}
