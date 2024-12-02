@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
   // Copy static assets
-  eleventyConfig.addPassthroughCopy("src/css");
+  // eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
 
   // Collections
@@ -52,6 +52,7 @@ module.exports = function (eleventyConfig) {
 
   // Watch for Tailwind CSS changes
   eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget("./_site/css/styles.css");
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
