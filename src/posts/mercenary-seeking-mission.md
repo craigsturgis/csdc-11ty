@@ -3,7 +3,7 @@ layout: post.njk
 title: Mercenary Seeking Mission
 date: 2021-06-23T10:52:00.000Z
 description: "What I'm doing with this next phase of my career          "
-featuredpost: true
+featuredpost: false
 featuredimage: /img/mandalorian.jpg
 tags:
   - product
