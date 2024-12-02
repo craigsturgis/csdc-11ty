@@ -14,11 +14,11 @@ title: Home
     </div>
 
     <section class="my-8 space-y-8 max-w-2xl mx-auto">
-        <p class="text-xl">I am a curious human with a winding journey of a <a href="#previous-experience" class="text-blue-600 dark:text-blue-400 hover:underline">tech career</a> and a family I do my best to put first.</p>
+        <p class="text-xl">I am a curious human with a winding journey of a <a href="#current-focus" class="text-blue-600 dark:text-blue-400 hover:underline">tech career</a> and a family I do my best to put first.</p>
 
-        <p class="text-xl">I run a tech professional services company called <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://prodyssey.com">Prodyssey</a> as my main professional focus.</p>
+        <p class="text-xl">I founded an agency called <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://prodyssey.com">Prodyssey</a> for SaaS companies as my main professional focus.</p>
 
-        <p class="text-xl">I like to occasionally <a href="#featured-posts" class="text-blue-600 dark:text-blue-400 hover:underline">write</a> about what I'm learning and share it here.</p>
+        <p class="text-xl">I like to occasionally <a href="#featured-posts" class="text-blue-600 dark:text-blue-400 hover:underline">write</a> about what I'm learning and share it here if it doesn't neatly fit my professional focus.</p>
     </section>
 
     <section class="my-8" id="featured-posts">
@@ -38,18 +38,41 @@ title: Home
             <p>No featured posts yet.</p>
         {% endif %}
     </section>
-
-    <section class="my-8" id="previous-experience">
-        <h2 class="text-2xl mb-4">Previous Experience</h2>
+    <section class="my-8" id="current-focus">
+        <h2 class="text-2xl mb-4">Current Professional Focus</h2>
+        {% from "macros/experience-item.njk" import experienceItem %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            {{ experienceItem(
+                "/img/prodyssey-logomark.png",
+                "Prodyssey",
+                "Prodyssey",
+                "Founder & CEO",
+                "2024 - Present",
+                "I founded Prodyssey as an agency focused on helping SaaS companies grow profitably through their product, tech, data, and ai functions in a way that enables their revenue functions.",
+                "https://prodyssey.com"
+            ) }}
+            {{ experienceItem(
+                "/img/uncovered-logo.png",
+                "Uncovered",
+                "Uncovered",
+                "Investor & Advisor",
+                "2021 - Present", 
+                "I invested in and am an advisor for Uncovered, a public benefit corporation focused on bringing attention to cold cases and supporting victims' families. I advise on product and technology tactics and strategy.",
+                "https://uncovered.com"
+            ) }}
+        </div>
+    </section>
+    <section class="my-8" id="previous-focus">
+        <h2 class="text-2xl mb-4">Past Focus</h2>
         {% from "macros/experience-item.njk" import experienceItem %}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {{ experienceItem(
                 "/img/cs-logomark-tile.png",
                 "Craig Sturgis Services",
                 "Craig Sturgis Services",
-                "Fractional CTO, Fractional CPO",
+                "Fractional CTO | CPO",
                 "2021 - 2024",
-                "I act as a fractional CPO, CTO, and coach for companies in a few sweet spots depending on their needs. I specialize in executive level support and coaching on product and/or tech strategy and direction, technology translation, product team hiring and lifecycle support, execution assistance, and measuring success in more effective ways."
+                "Solo Fractional CPO, CTO, and coach. I worked with a variety of private equity owned SaaS companies and early stage startups before deciding to narrow my focus and launch Prodyssey."
             ) }}
 
             {{ experienceItem(
@@ -58,7 +81,7 @@ title: Home
                 "SmarterHQ",
                 "VP of Product",
                 "2017 - 2021",
-                "(Acquired November 2020) I led the Product functions for this enterprise focused personalization scale up, now a Wunderkind company. In 2017 I \"boomeranged\" back to take over leadership of product management, product marketing, and product design functions. I led program management of a troubled technology platform migration to completion, a product marketing overhaul, multiple new feature launches, and a complete user and buyer research study informing the future vision of the platform. I contributed major support throughout a strategic acquisition process and close, and led initial technology integration efforts with the new parent company from the SmarterHQ side."
+                "(Acquired November 2020) I led the Product functions including product management, product marketing, and product design for this enterprise focused personalization scale up, now a Wunderkind company. I led program management of a troubled technology platform migration to completion, a product marketing overhaul, multiple new feature launches, and a complete user and buyer research study informing the future vision of the platform. I contributed major support throughout a strategic acquisition process and close, and led initial technology integration efforts with the new parent company from the SmarterHQ side."
             ) }}
 
             {{ experienceItem(
