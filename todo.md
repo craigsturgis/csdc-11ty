@@ -9,5 +9,7 @@
 - [x] sitemap.xml
 - [x] og images
 - [x] image processing
+- [x] netlify badge
+
 - [ ] background image for index header
 - [ ] background image for archive page header
