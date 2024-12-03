@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   // Copy static assets
   // eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
 
   // Collections
   eleventyConfig.addCollection("posts", function (collectionApi) {
