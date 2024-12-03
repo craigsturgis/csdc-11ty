@@ -1,0 +1,49 @@
+{% macro baseSchema(title, description, url) %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Craig Sturgis",
+            "url": "{{ url }}",
+            "description": "{{ description }}",
+            "author": {
+                "@type": "Person",
+                "name": "Craig Sturgis",
+                "url": "https://craigsturgis.com"
+            }
+        }
+    </script>
+{% endmacro %}
+
+{% macro blogPostSchema(post, url) %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ url }}"
+            },
+            "headline": "{{ post.data.title }}",
+            "description": "{{ post.data.description }}",
+            "datePublished": "{{ post.date | htmlDateString }}",
+            "dateModified": "{{ post.date | htmlDateString }}",
+            "author": {
+                "@type": "Person",
+                "name": "Craig Sturgis",
+                "url": "https://craigsturgis.com"
+            },
+            {% if post.data.featuredimage %}
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "{{ post.data.featuredimage }}"
+                },
+            {% endif %}
+            "publisher": {
+                "@type": "Person",
+                "name": "Craig Sturgis",
+                "url": "https://craigsturgis.com"
+            }
+        }
+    </script>
+{% endmacro %}
