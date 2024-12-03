@@ -24,6 +24,7 @@ title: Home
     <section class="my-8" id="featured-posts">
         <h2 class="text-2xl mb-4">Featured Writing</h2>
         {% from "macros/post-card.njk" import postCard %}
+        {% from "macros/email-signup.njk" import emailSignup %}
         {% set featured = collections.posts | filterBy('data.featuredpost', true) %}
         {% if featured.length %}
             <div class="space-y-8 mt-4">
@@ -37,6 +38,7 @@ title: Home
         {% else %}
             <p>No featured posts yet.</p>
         {% endif %}
+        {{ emailSignup() }}
     </section>
     <section class="my-8" id="current-focus">
         <h2 class="text-2xl mb-4">Current Professional Focus</h2>

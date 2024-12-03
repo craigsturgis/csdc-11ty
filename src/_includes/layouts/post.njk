@@ -25,6 +25,9 @@ layout: base.njk
     <div class="prose prose-lg prose-blue dark:prose-invert max-w-none">
         {{ content | safe }}
     </div>
+    {% from "macros/email-signup.njk" import emailSignup %}
+
+    {{ emailSignup("Get more posts like this in your inbox") }}
 
     <footer class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
         <nav class="flex justify-between">
