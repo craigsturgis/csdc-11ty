@@ -2,6 +2,9 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const markdownItFootnote = require("markdown-it-footnote");
 const { DateTime } = require("luxon");
+const Image = require("@11ty/eleventy-img");
+const path = require("path");
+const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // Add RSS plugin
@@ -55,6 +58,45 @@ module.exports = function (eleventyConfig) {
   let markdownLibrary = markdownIt({
     html: true,
   }).use(markdownItFootnote);
+
+  // Override the default image renderer
+  markdownLibrary.renderer.rules.image = function (
+    tokens,
+    idx,
+    options,
+    env,
+    self
+  ) {
+    const token = tokens[idx];
+    const src = token.attrs[token.attrIndex("src")][1];
+    const alt = token.content;
+
+    const cleanSrc = src.replace(/^\/img\//, "").replace(/^\/|\/$/g, "");
+    const extension = path.extname(cleanSrc);
+    const basename = path.basename(cleanSrc, extension);
+
+    return `
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/img/${basename}-300w.webp 300w,
+                  /img/${basename}-600w.webp 600w,
+                  /img/${basename}-900w.webp 900w"
+          sizes="(min-width: 1024px) 100vw, 50vw">
+        <source
+          type="image/jpeg"
+          srcset="/img/${basename}-300w.jpeg 300w,
+                  /img/${basename}-600w.jpeg 600w,
+                  /img/${basename}-900w.jpeg 900w"
+          sizes="(min-width: 1024px) 100vw, 50vw">
+        <img
+          src="/img/${basename}-600w.jpeg"
+          alt="${alt}"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-auto">
+      </picture>`;
+  };
 
   // Set as library for markdown files
   eleventyConfig.setLibrary("md", markdownLibrary);
@@ -111,6 +153,58 @@ module.exports = function (eleventyConfig) {
     return date instanceof Date
       ? date.toISOString()
       : new Date(date).toISOString();
+  });
+
+  // Add image shortcode with Tailwind classes
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "image",
+    async (src, alt, sizes, classes = "") => {
+      let metadata = await Image("src" + src, {
+        widths: [300, 600, 900],
+        formats: ["webp", "jpeg"],
+        urlPath: "/img/",
+        outputDir: "./_site/img/",
+      });
+
+      let imageAttributes = {
+        alt,
+        sizes,
+        class: classes,
+        loading: "lazy",
+        decoding: "async",
+      };
+
+      return Image.generateHTML(metadata, imageAttributes);
+    }
+  );
+
+  // Add environment variable to eleventy data
+  eleventyConfig.addGlobalData("eleventy", {
+    env: process.env,
+  });
+
+  eleventyConfig.addPlugin(function (eleventyConfig) {
+    // Process all images during build
+    eleventyConfig.on("beforeBuild", async () => {
+      const imageDir = "src/img";
+      const files = fs.readdirSync(imageDir);
+
+      for (const file of files) {
+        if (file.match(/\.(jpg|jpeg|png|gif)$/i)) {
+          await Image(path.join(imageDir, file), {
+            widths: [300, 600, 900],
+            formats: ["webp", "jpeg"],
+            urlPath: "/img/",
+            outputDir: "./_site/img/",
+            filenameFormat: function (id, src, width, format) {
+              const extension = path.extname(src);
+              const name = path.basename(src, extension);
+              return `${name}-${width}w.${format}`;
+            },
+          });
+        }
+      }
+    });
   });
 
   return {

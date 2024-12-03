@@ -8,24 +8,36 @@ blogPostSchema %}
         <title>
             {% if title %}{{ title }} - {% endif %}Craig Sturgis</title>
 
-        <!-- Google Analytics -->
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETGBQ21QLW"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+        <!-- Open Graph Meta Tags -->
+        {% set defaultImage = "/img/Craig-Sturgis-headshot-2019.jpg" %}
+        {% set ogImage = featuredimage or defaultImage %}
+        <meta property="og:title" content="{% if title %}{{ title }}{% else %}Craig Sturgis{% endif %}">
+        <meta property="og:type" content="{% if layout == 'post.njk' %}article{% else %}website{% endif %}">
+        <meta property="og:image" content="{{ metadata.url }}{{ ogImage }}">
+        <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+        <meta property="og:description" content="{{ description or 'Craig Sturgis - Product and Technology Leader' }}">
 
-            gtag('config', 'G-ETGBQ21QLW');
-        </script>
+        <!-- Google Analytics -->
+        {% if eleventy.env.CONTEXT == "production" %}
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETGBQ21QLW"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'G-ETGBQ21QLW');
+            </script>
+        {% endif %}
 
         <!-- Add favicon support -->
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
         <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
