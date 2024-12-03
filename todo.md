@@ -1,8 +1,11 @@
 - [x] mailing list signup
-- [ ] contact page
-- [ ] background image for index header
+- [x] contact page
+- [x] affiliate link page
 - [ ] structured data for SEO
 - [ ] favicon
 - [ ] RSS feed
 - [ ] Google Analytics
 - [ ] sitemap.xml
+- [ ] top level slugs for posts
+- [ ] background image for index header
+- [ ] background image for archive page header

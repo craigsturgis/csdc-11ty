@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+
+<article class="max-w-prose mx-auto px-4 sm:px-6 py-8">
+    <header class="mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-2 dark:text-white">{{ title }}</h1>
+    </header>
+
+    <div class="prose prose-lg prose-blue dark:prose-invert max-w-none">
+        {{ content | safe }}
+    </div>
+</article>
