@@ -1,0 +1,8 @@
+- [x] mailing list signup
+- [ ] contact page
+- [ ] background image for index header
+- [ ] structured data for SEO
+- [ ] favicon
+- [ ] RSS feed
+- [ ] Google Analytics
+- [ ] sitemap.xml
