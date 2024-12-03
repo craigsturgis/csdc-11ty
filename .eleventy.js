@@ -13,11 +13,19 @@ module.exports = function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md");
+    return collectionApi.getFilteredByGlob("src/posts/*.md").map((post) => {
+      // Ensure permalink starts with / and ends with /
+      post.data.permalink = `/${post.fileSlug.replace(/^\/|\/$/g, "")}/`;
+      return post;
+    });
   });
 
   eleventyConfig.addCollection("archive", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/archive/*.md");
+    return collectionApi.getFilteredByGlob("src/archive/*.md").map((item) => {
+      // Ensure permalink starts with / and ends with /
+      item.data.permalink = `/${item.fileSlug.replace(/^\/|\/$/g, "")}/`;
+      return item;
+    });
   });
 
   // Add date filter
@@ -64,6 +72,46 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
+  // Add metadata
+  eleventyConfig.addGlobalData("metadata", {
+    url: "https://craigsturgis.com",
+    title: "Craig Sturgis",
+    description: "Personal website of Craig Sturgis",
+    feed: {
+      subtitle: "I write sometimes. Here it is.",
+      filename: "feed.xml",
+      path: "/feed.xml",
+      id: "https://craigsturgis.com/",
+    },
+    author: {
+      name: "Craig Sturgis",
+      email: "craig@craigsturgis.com",
+    },
+  });
+
+  // Add absolute URL filter
+  eleventyConfig.addFilter("absoluteUrl", (url, base) => {
+    try {
+      return new URL(url, base).toString();
+    } catch (e) {
+      console.error(`Error resolving absolute URL: ${url} using base ${base}`);
+      return url;
+    }
+  });
+
+  // Add this new feed configuration
+  eleventyConfig.addPlugin(pluginRss, {
+    posthtmlRenderOptions: {
+      closingSingleTag: "slash",
+    },
+  });
+
+  eleventyConfig.addFilter("dateToISO", function (date) {
+    return date instanceof Date
+      ? date.toISOString()
+      : new Date(date).toISOString();
+  });
+
   return {
     dir: {
       input: "src",
@@ -71,6 +119,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       layouts: "_includes/layouts",
     },
+    permalinkBypassOutputDir: true,
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
