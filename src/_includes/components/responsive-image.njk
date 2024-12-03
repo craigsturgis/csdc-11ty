@@ -1,0 +1,21 @@
+{% macro responsiveImage(src, alt, sizes = "100vw", className = "") %}
+    <picture>
+        {% for width in[300, 600, 900] %}
+            <source
+        type="image/webp"
+        srcset="/img/{{ src | replace('.jpg', '') }}-{{width}}w.webp"
+        media="(max-width: {{width}}px)">
+            <source
+        type="image/jpeg"
+        srcset="/img/{{ src | replace('.jpg', '') }}-{{width}}w.jpeg"
+        media="(max-width: {{width}}px)">
+        {% endfor %}
+        <img
+      src="/img/{{ src | replace('.jpg', '') }}-900w.jpeg"
+      alt="{{ alt }}"
+      loading="lazy"
+      decoding="async"
+      class="{{ className }}"
+      sizes="{{ sizes }}">
+    </picture>
+{% endmacro %}
