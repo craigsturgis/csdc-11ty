@@ -75,22 +75,63 @@ module.exports = function (eleventyConfig) {
     const extension = path.extname(cleanSrc);
     const basename = path.basename(cleanSrc, extension);
 
+    // Check which sizes exist by looking at the processed images
+    const outputDir = "./_site/img/";
+    const availableSizes = [];
+    
+    // Look for any processed images that match the pattern basename-XXXw
+    try {
+      const files = fs.readdirSync(outputDir);
+      const pattern = new RegExp(`^${basename}-(\\d+)w\\.(webp|jpeg)$`);
+      
+      for (const file of files) {
+        const match = file.match(pattern);
+        if (match) {
+          const width = parseInt(match[1]);
+          if (!availableSizes.includes(width)) {
+            availableSizes.push(width);
+          }
+        }
+      }
+      
+      // Sort sizes from smallest to largest
+      availableSizes.sort((a, b) => a - b);
+    } catch (err) {
+      // Fallback to checking standard sizes if directory read fails
+      const possibleSizes = [300, 600, 900];
+      for (const size of possibleSizes) {
+        const webpPath = path.join(outputDir, `${basename}-${size}w.webp`);
+        const jpegPath = path.join(outputDir, `${basename}-${size}w.jpeg`);
+        if (fs.existsSync(webpPath) || fs.existsSync(jpegPath)) {
+          availableSizes.push(size);
+        }
+      }
+    }
+
+    // Fallback to original image if no processed versions exist
+    if (availableSizes.length === 0) {
+      return `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" class="w-full h-auto">`;
+    }
+
+    // Build srcset strings for available sizes
+    const webpSrcset = availableSizes.map(size => `/img/${basename}-${size}w.webp ${size}w`).join(', ');
+    const jpegSrcset = availableSizes.map(size => `/img/${basename}-${size}w.jpeg ${size}w`).join(', ');
+    
+    // Use the largest available size as the fallback
+    const fallbackSize = Math.max(...availableSizes);
+
     return `
       <picture>
         <source
           type="image/webp"
-          srcset="/img/${basename}-300w.webp 300w,
-                  /img/${basename}-600w.webp 600w,
-                  /img/${basename}-900w.webp 900w"
+          srcset="${webpSrcset}"
           sizes="(min-width: 1024px) 100vw, 50vw">
         <source
           type="image/jpeg"
-          srcset="/img/${basename}-300w.jpeg 300w,
-                  /img/${basename}-600w.jpeg 600w,
-                  /img/${basename}-900w.jpeg 900w"
+          srcset="${jpegSrcset}"
           sizes="(min-width: 1024px) 100vw, 50vw">
         <img
-          src="/img/${basename}-600w.jpeg"
+          src="/img/${basename}-${fallbackSize}w.jpeg"
           alt="${alt}"
           loading="lazy"
           decoding="async"

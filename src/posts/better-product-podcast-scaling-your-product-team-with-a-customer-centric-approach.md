@@ -41,7 +41,7 @@ If you find it interesting or useful you should subscribe, there are tons of gre
 
 <div class="columns">
 <div class="column"></div>
-<div class="column"><img alt="Better Product Podcast" src="https://craigsturgis.com/img/better-product-podcast-cover.png" /></div>
-<div class="column"><img alt="Season 2: Craig Sturgis" src="https://craigsturgis.com/img/better-product-craig-sturgis-episode-art.png" /></div>
+<div class="column"><img alt="Better Product Podcast" src="/img/better-product-podcast-cover.png" /></div>
+<div class="column"><img alt="Season 2: Craig Sturgis" src="/img/better-product-craig-sturgis-episode-art.png" /></div>
 <div class="column"></div>
 </div>

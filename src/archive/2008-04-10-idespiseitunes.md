@@ -14,7 +14,7 @@ _(Note: This post originally appeared on the now defunct craigtsoandso.com. Date
 
 \*(The application, on windows)
 
-<div style="float: right; margin-left: 5px;"><img src="/images/themadnote.jpg" alt="The Mad Note" title="I'm pretty sure I drew the face on this note with MSPaint"/></div>
+<div style="float: right; margin-left: 5px;"><img src="/img/themadnote.jpg" alt="The Mad Note" title="I'm pretty sure I drew the face on this note with MSPaint"/></div>
 
 I listen to a well above average amount of music while sitting at a computer, both at home and at the office. I have a very large collection of music, but I don’t think my musical needs and computer music quirks are all that outrageous. It very well may be a symptom of my inaction or seeming inability to migrate away from Windows as a primary operating system[^1], but iTunes causes me an inordinate amount of aggravation.
 
