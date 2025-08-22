@@ -41,6 +41,15 @@ title: Home
         {% from "macros/experience-item.njk" import experienceItem %}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {{ experienceItem(
+                "/img/vibecto-logo.png",
+                "Vibecto.ai",
+                "Vibecto.ai",
+                "[ROLE TO BE FILLED]",
+                "August 2025 - Present",
+                "[DESCRIPTION TO BE FILLED - Please research vibecto.ai website to create a description similar to other tiles]",
+                "https://vibecto.ai"
+            ) }}
+            {{ experienceItem(
                 "/img/prodyssey-logomark-dark.svg",
                 "Prodyssey",
                 "Prodyssey",
@@ -49,6 +58,12 @@ title: Home
                 "I founded Prodyssey as an agency focused on helping SaaS companies grow profitably through their product, tech, data, and ai functions in a way that enables their revenue functions.",
                 "https://prodyssey.com"
             ) }}
+        </div>
+    </section>
+    <section class="my-8" id="previous-focus">
+        <h2 class="text-2xl mb-4">Past Focus</h2>
+        {% from "macros/experience-item.njk" import experienceItem %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {{ experienceItem(
                 "/img/uncovered-logo.png",
                 "Uncovered",
@@ -58,12 +73,7 @@ title: Home
                 "I invested in and am an advisor for Uncovered, a public benefit corporation focused on bringing attention to cold cases and supporting victims' families. I advise on product and technology tactics and strategy.",
                 "https://uncovered.com"
             ) }}
-        </div>
-    </section>
-    <section class="my-8" id="previous-focus">
-        <h2 class="text-2xl mb-4">Past Focus</h2>
-        {% from "macros/experience-item.njk" import experienceItem %}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+
             {{ experienceItem(
                 "/img/cs-logomark-tile.png",
                 "Craig Sturgis Services",
