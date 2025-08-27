@@ -12,7 +12,7 @@ title: Home
     <section class="my-8 space-y-8 max-w-2xl mx-auto">
         <p class="text-xl">I am a curious human with a winding journey of a <a href="#current-focus" class="text-blue-600 dark:text-blue-400 hover:underline">tech career</a> and a family I do my best to put first.</p>
 
-        <p class="text-xl">I founded an agency called <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://prodyssey.com">Prodyssey</a> for SaaS companies as my main professional focus.</p>
+        <p class="text-xl">I founded an agency called <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://vibecto.ai">VibeCTO.ai</a> to help companies build with AI effectively as my main professional focus.</p>
 
         <p class="text-xl">I like to occasionally write about what I'm learning and share it here if it doesn't neatly fit into writing I'm doing for my day to day work.</p>
     </section>
@@ -49,6 +49,12 @@ title: Home
                 "I got a taste for how AI could make me a better builder as part of my consulting work, and founded Vibecto.ai to bring a human element to helping adopt these technologies and get better.",
                 "https://vibecto.ai"
             ) }}
+        </div>
+    </section>
+    <section class="my-8" id="previous-focus">
+        <h2 class="text-2xl mb-4">Past Focus</h2>
+        {% from "macros/experience-item.njk" import experienceItem %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {{ experienceItem(
                 "/img/prodyssey-logomark-dark.svg",
                 "Prodyssey",
@@ -58,12 +64,6 @@ title: Home
                 "I founded Prodyssey as an agency focused on helping SaaS companies grow profitably through their product, tech, data, and ai functions in a way that enables their revenue functions.",
                 "https://prodyssey.com"
             ) }}
-        </div>
-    </section>
-    <section class="my-8" id="previous-focus">
-        <h2 class="text-2xl mb-4">Past Focus</h2>
-        {% from "macros/experience-item.njk" import experienceItem %}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {{ experienceItem(
                 "/img/uncovered-logo.png",
                 "Uncovered",
