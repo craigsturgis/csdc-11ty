@@ -2,4 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add any custom styles here */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #0b0d0c;
+  }
+
+  ::selection {
+    background: #6dc18b;
+    color: #0b0d0c;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs font-semibold uppercase tracking-[0.22em] text-mint;
+  }
+
+  .display-heading {
+    @apply text-5xl font-semibold leading-[0.9] tracking-[-0.055em] text-paper sm:text-7xl lg:text-8xl;
+  }
+
+  .section-rule {
+    @apply border-t border-white/15 pt-8 sm:pt-12;
+  }
+
+  .text-link {
+    @apply underline decoration-white/30 underline-offset-4 transition-colors hover:text-mint hover:decoration-mint;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center bg-mint px-6 py-3 font-mono text-xs font-bold uppercase tracking-[0.16em] text-ink transition-colors hover:bg-paper;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center border border-white/25 px-6 py-3 font-mono text-xs font-bold uppercase tracking-[0.16em] text-paper transition-colors hover:border-mint hover:text-mint;
+  }
+
+  .editorial-card {
+    @apply border border-white/15 bg-white/[0.025] p-6 sm:p-8;
+  }
+}

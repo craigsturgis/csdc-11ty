@@ -4,20 +4,21 @@ title: Archive
 permalink: /archive/
 ---
 
-<div class="prose dark:prose-invert lg:prose-xl mx-auto">
-    <h1>Archive</h1>
+<div class="mx-auto max-w-4xl">
+    <p class="eyebrow mb-4">The long trail</p>
+    <h1 class="text-5xl font-semibold tracking-[-0.05em] sm:text-7xl">Complete archive</h1>
 
     {% set postslist = collections.archive %}
     {% if postslist.length %}
-        <div class="space-y-4 mt-4">
+        <div class="mt-12 divide-y divide-white/15 border-y border-white/15">
             {%- for post in postslist | reverse -%}
-                <div class="group">
+                <div class="group py-6">
                     <a href="{{ post.url }}" class="no-underline">
-                        <h3 class="mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400">{{ post.data.title }}</h3>
+                        <h3 class="mb-2 text-2xl font-semibold transition-colors group-hover:text-mint">{{ post.data.title }}</h3>
                         {% if post.data.description %}
-                            <p class="text-gray-600 dark:text-gray-400 mt-1">{{ post.data.description }}</p>
+                            <p class="mt-1 text-fog">{{ post.data.description }}</p>
                         {% endif %}
-                        <span class="text-sm text-gray-500">
+                        <span class="font-mono text-xs uppercase tracking-[0.12em] text-fog">
                             {{ post.date | dateFilter }}
                         </span>
                     </a>
