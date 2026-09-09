@@ -13,7 +13,6 @@ module.exports = function (eleventyConfig) {
   // Copy static assets
   // eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
-  eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
 
   // Collections
@@ -161,10 +160,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("metadata", {
     url: "https://craigsturgis.com",
     title: "Craig Sturgis",
-    description:
-      "Craig Sturgis is a builder, operator, and founder of Vibecto, helping companies put AI agents to work across the business.",
+    description: "Personal website of Craig Sturgis",
     feed: {
-      subtitle: "Notes from Craig Sturgis on building, operating, and the winding path.",
+      subtitle: "I write sometimes. Here it is.",
       filename: "feed.xml",
       path: "/feed.xml",
       id: "https://craigsturgis.com/",

@@ -1,109 +1,132 @@
 ---
 layout: base.njk
 title: Home
-description: Craig Sturgis is a builder, operator, and founder of Vibecto, helping companies put AI agents to work across the business.
 ---
 
-<div>
-    <section class="grid min-h-[72vh] items-end gap-12 pb-16 pt-8 lg:grid-cols-[1.35fr_0.65fr] lg:pb-24 lg:pt-16">
-        <div>
-            <p class="eyebrow mb-7">Builder · Operator · Outside execution partner</p>
-            <h1 class="display-heading max-w-5xl">I help ambitious teams put agents to work.</h1>
-            <p class="mt-8 max-w-2xl text-xl leading-relaxed text-fog sm:text-2xl">
-                I’m Craig Sturgis. I’ve spent more than 20 years building products and leading teams. Now I help companies use AI agents to change how the work actually gets done.
-            </p>
-            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-                <a class="button-primary" href="https://vibecto.ai/how-we-work">See how I work <span class="ml-3" aria-hidden="true">→</span></a>
-                <a class="button-secondary" href="#writing">Read my writing</a>
-            </div>
-        </div>
-        <div class="relative mx-auto w-full max-w-sm lg:mx-0 lg:justify-self-end">
-            <div class="absolute -left-3 -top-3 h-full w-full border border-mint/50" aria-hidden="true"></div>
-            {% image "/img/headshot-2026-neutral.webp", "Craig Sturgis", "(max-width: 1024px) 90vw, 420px", "relative aspect-[4/5] w-full object-cover grayscale" %}
-            <p class="relative mt-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-fog">Indianapolis · Working across the Midwest and beyond</p>
-        </div>
+<div class="prose dark:prose-invert lg:prose-xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 mb-8">
+        {% image "/img/Craig-Sturgis-headshot-2019.jpg", "Craig Sturgis headshot", "(max-width: 600px) 100vw, 600px", "w-48 h-48 rounded-full object-cover mx-auto md:mx-0" %}
+        <h1 class="text-4xl text-center md:text-left">Hi, I'm Craig.</h1>
+    </div>
+
+    <section class="my-8 space-y-8 max-w-2xl mx-auto">
+        <p class="text-xl">I am a curious human with a winding journey of a <a href="#current-focus" class="text-blue-600 dark:text-blue-400 hover:underline">tech career</a> and a family I do my best to put first.</p>
+
+        <p class="text-xl">I founded an agency called <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://vibecto.ai">VibeCTO.ai</a> to help companies build with AI effectively as my main professional focus.</p>
+
+        <p class="text-xl">I like to occasionally write about what I'm learning and share it here if it doesn't neatly fit into writing I'm doing for my day to day work.</p>
     </section>
 
-    <section class="section-rule grid gap-8 py-16 lg:grid-cols-[0.65fr_1.35fr] lg:py-24" id="current-focus">
-        <div>
-            <p class="eyebrow">The current chapter</p>
-        </div>
-        <div>
-            <h2 class="max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">I founded Vibecto to help companies be more ambitious with agents.</h2>
-            <div class="mt-8 grid gap-6 text-lg leading-relaxed text-fog sm:grid-cols-2">
-                <p>We build agents and AI workflows into sales, operations, client delivery, marketing, finance, support, and software—wherever they can create real leverage.</p>
-                <p>The hard part isn’t access to the tools. It’s seeing where they belong, shipping useful systems, and helping the change stick. I stay hands-on with a small number of companies at a time.</p>
-            </div>
-            <div class="mt-8 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs font-semibold uppercase tracking-[0.14em]">
-                <a class="text-link" href="https://vibecto.ai">Visit Vibecto →</a>
-                <a class="text-link" href="https://vibecto.ai/automation-library">Explore the automation library →</a>
-                <a class="text-link" href="https://vibecto.ai/contact?source=craigsturgis">Start a conversation →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-rule py-16 lg:py-24" id="writing">
-        <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-                <p class="eyebrow mb-4">Selected writing</p>
-                <h2 class="text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Notes from the work and the winding path.</h2>
-            </div>
-            <a href="/posts/" class="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-link">All writing →</a>
-        </div>
+    <section class="my-8" id="featured-posts">
+        <h2 class="text-2xl mb-4">Featured Writing</h2>
         {% from "macros/post-card.njk" import postCard %}
+        {% from "macros/email-signup.njk" import emailSignup %}
         {% set featured = collections.posts | filterBy('data.featuredpost', true) %}
         {% if featured.length %}
-            <div class="grid gap-6 lg:grid-cols-2">
+            <div class="space-y-8 mt-4">
                 {%- for post in featured | reverse -%}
-                    <div class="editorial-card">{{ postCard(post) }}</div>
+                    {{ postCard(post) }}
                 {%- endfor -%}
             </div>
+            <p class="mt-6">
+                <a href="/posts/" class="text-blue-600 dark:text-blue-400 hover:underline">View all posts →</a>
+            </p>
         {% else %}
-            <p class="text-fog">No featured posts yet.</p>
+            <p>No featured posts yet.</p>
         {% endif %}
-        <div class="editorial-card mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-                <p class="eyebrow mb-2">More current thinking</p>
-                <p class="max-w-2xl text-lg text-fog">Most of my writing about agents, operating change, and what I’m learning now lives in Vibecto’s insights.</p>
-            </div>
-            <a class="button-secondary shrink-0" href="https://vibecto.ai/resources">Read Vibecto insights →</a>
+        {{ emailSignup() }}
+    </section>
+    <section class="my-8" id="current-focus">
+        <h2 class="text-2xl mb-4">Current Professional Focus</h2>
+        {% from "macros/experience-item.njk" import experienceItem %}
+        <div class="flex justify-center">
+            {{ experienceItem(
+                "/img/vibecto.png",
+                "Vibecto.ai",
+                "Vibecto.ai",
+                "Founder & CEO",
+                "2025 - Present",
+                "I got a taste for how AI could make me a better builder as part of my consulting work, and founded Vibecto.ai to bring a human element to helping adopt these technologies and get better.",
+                "https://vibecto.ai"
+            ) }}
         </div>
     </section>
+    <section class="my-8" id="previous-focus">
+        <h2 class="text-2xl mb-4">Past Focus</h2>
+        {% from "macros/experience-item.njk" import experienceItem %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            {{ experienceItem(
+                "/img/prodyssey-logomark-dark.svg",
+                "Prodyssey",
+                "Prodyssey",
+                "Founder & CEO",
+                "2024 - Present",
+                "I founded Prodyssey as an agency focused on helping SaaS companies grow profitably through their product, tech, data, and ai functions in a way that enables their revenue functions.",
+                "https://prodyssey.com"
+            ) }}
+            {{ experienceItem(
+                "/img/uncovered-logo.png",
+                "Uncovered",
+                "Uncovered",
+                "Investor & Advisor",
+                "2021 - Present", 
+                "I invested in and am an advisor for Uncovered, a public benefit corporation focused on bringing attention to cold cases and supporting victims' families. I advise on product and technology tactics and strategy.",
+                "https://uncovered.com"
+            ) }}
 
-    <section class="section-rule py-16 lg:py-24" id="experience">
-        <div class="grid gap-10 lg:grid-cols-[0.65fr_1.35fr]">
-            <div>
-                <p class="eyebrow mb-4">The path here</p>
-                <h2 class="text-4xl font-semibold tracking-[-0.04em]">A winding career in building and leading.</h2>
-            </div>
-            <div class="divide-y divide-white/15 border-y border-white/15">
-                {% set roles = [
-                    { company: "Vibecto", role: "Founder", period: "2025 — Present", url: "https://vibecto.ai" },
-                    { company: "Prodyssey", role: "Founder & CEO", period: "2024 — 2025", url: "https://prodyssey.com" },
-                    { company: "Craig Sturgis Services", role: "Fractional CTO / CPO", period: "2021 — 2024" },
-                    { company: "Uncovered", role: "Investor & Advisor", period: "2021 — Present", url: "https://uncovered.com" },
-                    { company: "SmarterHQ", role: "VP of Product", period: "2017 — 2021" },
-                    { company: "Angie’s List", role: "Director of Product Management", period: "2015 — 2017" },
-                    { company: "Haven", role: "Co-founder & CTO", period: "2014 — 2015" },
-                    { company: "SmarterRemarketer", role: "Lead Software Engineer", period: "2011 — 2014" },
-                    { company: "Aprimo", role: "Software Engineer", period: "2006 — 2011" }
-                ] %}
-                {% for item in roles %}
-                    <div class="grid gap-1 py-5 sm:grid-cols-[1fr_1fr_auto] sm:items-baseline sm:gap-6">
-                        <h3 class="text-xl font-semibold">
-                            {% if item.url %}<a class="transition-colors hover:text-mint" href="{{ item.url }}">{{ item.company }}</a>{% else %}{{ item.company }}{% endif %}
-                        </h3>
-                        <p class="text-fog">{{ item.role }}</p>
-                        <p class="font-mono text-xs uppercase tracking-[0.12em] text-fog">{{ item.period }}</p>
-                    </div>
-                {% endfor %}
-            </div>
+            {{ experienceItem(
+                "/img/cs-logomark-tile.png",
+                "Craig Sturgis Services",
+                "Craig Sturgis Services",
+                "Fractional CTO | CPO",
+                "2021 - 2024",
+                "Solo Fractional CPO, CTO, and coach. I worked with a variety of private equity owned SaaS companies and early stage startups before deciding to narrow my focus and launch Prodyssey."
+            ) }}
+
+            {{ experienceItem(
+                "/img/SmarterHQ-Logo-tile.png",
+                "SmarterHQ",
+                "SmarterHQ",
+                "VP of Product",
+                "2017 - 2021",
+                "(Acquired November 2020) I led the Product functions including product management, product marketing, and product design for this enterprise focused personalization scale up, now a Wunderkind company. I led program management of a troubled technology platform migration to completion, a product marketing overhaul, multiple new feature launches, and a complete user and buyer research study informing the future vision of the platform. I contributed major support throughout a strategic acquisition process and close, and led initial technology integration efforts with the new parent company from the SmarterHQ side."
+            ) }}
+
+            {{ experienceItem(
+                "/img/angies-list-logo.png",
+                "Angie's List",
+                "Angie's List",
+                "Director of Product Management",
+                "2015-2017",
+                "(Merged with Home Advisor October 2017) I led product teams in a growing capacity during a time of change for Angie's List. First focusing on technical platform products for strategic partnerships, I expanded to take over leadership of the product teams for service providers and then eventually added customer acquisition and retention for both sides of the marketplace in addition to reviews. As part of the merger with HomeAdvisor, I led the technical integration team from the Angie's List side to an on time launch of the integrated service request funnel."
+            ) }}
+
+            {{ experienceItem(
+                "/img/haven-tile.png",
+                "Haven",
+                "Haven",
+                "Co-founder & CTO",
+                "2014-2015",
+                "(IP Acquired August 2015) Co-founded and led the technology and product functions for Haven, a consumer focused home management marketplace product. I built the core of the product from scratch and led the growing product team after we raised 1M in seed funding, built and launched the initial version to the Indianapolis market. When initial growth stalled and additional funding was not secured, I helped with the sale of our intellectual property and wind-down of the company."
+            ) }}
+
+            {{ experienceItem(
+                "/img/Smarter-Remarketer-tile.png",
+                "SmarterHQ",
+                "SmarterRemarketer",
+                "Lead Software Engineer",
+                "2011-2014",
+                "(Closed Series A January 2014 led by Battery Ventures) Joined as one of the first few employees at SmarterRemarketer, which later rebranded as SmarterHQ. When I joined it was a scrappy enterprise marketing automation startup founded by ExactTarget and data science veterans with a huge vision. As an early engineer, I built core pieces of the product and started and scaled the dedicated technical implementation team and tools as the company grew through closing its $8M series A round from Battery Ventures."
+            ) }}
+
+            {{ experienceItem(
+                "/img/Aprimo-tile.png",
+                "Aprimo",
+                "Aprimo",
+                "Software Engineer",
+                "2006-2011",
+                "(Acquired January 2011 by Teradata) Boarded the Aprimo rocket ship mid flight and learned a ton from a lot of great and talented people. Worked as a software engineer on several teams including the flagship MRM product and the reporting and analytics MPM product before moving to work on the first full fledged SAAS offering Aprimo Marketing Studio up through the company's acquisition for $550M by Teradata."
+            ) }}
         </div>
-    </section>
-
-    <section class="section-rule py-16 text-center lg:py-24">
-        <p class="eyebrow mb-5">Have something ambitious in mind?</p>
-        <h2 class="mx-auto max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">Bring me a real problem. Let’s see what agents make possible.</h2>
-        <a class="button-primary mt-9" href="https://vibecto.ai/contact?source=craigsturgis_footer">Talk to Craig <span class="ml-3" aria-hidden="true">→</span></a>
     </section>
 </div>
