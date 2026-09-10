@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
   // Copy static assets
   // eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/css/at-that-age.css");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
 
   // Collections

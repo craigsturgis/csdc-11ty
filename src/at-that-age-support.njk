@@ -1,0 +1,229 @@
+---
+permalink: /at-that-age/support/index.html
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>At That Age Support</title>
+    <meta name="description" content="Help, troubleshooting, and contact information for the At That Age iPhone app.">
+    <meta name="theme-color" content="#1f3a66">
+    <link rel="icon" type="image/png" href="/img/at-that-age-icon.png">
+    <link rel="apple-touch-icon" href="/img/at-that-age-icon.png">
+    <link rel="stylesheet" href="/css/at-that-age.css">
+  </head>
+  <body class="support-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/at-that-age/" aria-label="At That Age home">
+        <img src="/img/at-that-age-icon.png" width="48" height="48" alt="">
+        <span>At That Age</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/at-that-age/">About the app</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="support-hero">
+        <div class="support-shell">
+          <p class="eyebrow">At That Age support</p>
+          <h1>How can I help?</h1>
+          <p>Find quick answers below, or send a support request if something isn’t working the way it should.</p>
+          <a class="primary-link" href="#support-form">
+            Contact support
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="support-content support-shell" id="troubleshooting">
+        <div class="support-index" aria-label="On this page">
+          <p class="eyebrow">Quick help</p>
+          <a href="#photos">Photo access</a>
+          <a href="#matches">Missing or incorrect matches</a>
+          <a href="#faces">Teaching faces</a>
+          <a href="#purchases">Purchases</a>
+          <a href="#transfer">Moving to another iPhone</a>
+        </div>
+
+        <div class="support-answers">
+          <article id="photos">
+            <span class="support-icon" aria-hidden="true">01</span>
+            <div>
+              <h2>Photo access</h2>
+              <p>At That Age needs access to your photo library to find pictures by date. Full access works best so photos aren’t missed.</p>
+              <ol>
+                <li>Open <strong>Settings</strong> on your iPhone.</li>
+                <li>Choose <strong>Apps → At That Age → Photos</strong>.</li>
+                <li>Select <strong>Full Access</strong>.</li>
+              </ol>
+              <p class="support-note">Your photos stay on your device. Photo search and face matching run locally on your iPhone.</p>
+            </div>
+          </article>
+
+          <article id="matches">
+            <span class="support-icon" aria-hidden="true">02</span>
+            <div>
+              <h2>Missing or incorrect matches</h2>
+              <p>The app searches around the exact target date, widening the window when needed. If a good photo is missing:</p>
+              <ul>
+                <li>Confirm the child’s birthday in the Kids tab.</li>
+                <li>Make sure At That Age has full photo access.</li>
+                <li>Teach the app a few examples of that child’s face.</li>
+                <li>Open another result and choose <strong>Use in side by side</strong>.</li>
+              </ul>
+              <p>If a photo shows the wrong child, tap <strong>Who’s this?</strong> and choose <strong>Neither</strong>. The app remembers that correction on your device.</p>
+            </div>
+          </article>
+
+          <article id="faces">
+            <span class="support-icon" aria-hidden="true">03</span>
+            <div>
+              <h2>Teaching faces</h2>
+              <p>Teaching faces is optional, but it improves matching—especially when siblings look alike.</p>
+              <ol>
+                <li>Open the <strong>Kids</strong> tab.</li>
+                <li>Choose a child, then tap <strong>Teach face</strong>.</li>
+                <li>Select that child in several photos sampled across their life and save.</li>
+              </ol>
+              <p>Face signatures never leave your device and are not sent to the app’s developer or any server.</p>
+            </div>
+          </article>
+
+          <article id="purchases">
+            <span class="support-icon" aria-hidden="true">04</span>
+            <div>
+              <h2>Purchases and restoring access</h2>
+              <p>Today’s comparison and one different comparison each day are free. Choosing any age or date is a one-time purchase—not a subscription.</p>
+              <p>If you already purchased the unlock, open the Kids tab and tap <strong>Restore purchases</strong>. Make sure the iPhone is signed in to the same Apple Account used for the original purchase.</p>
+              <p>Payments and entitlements are handled by Apple through the App Store.</p>
+            </div>
+          </article>
+
+          <article id="transfer">
+            <span class="support-icon" aria-hidden="true">05</span>
+            <div>
+              <h2>Moving to another iPhone</h2>
+              <p>A normal Quick Start or iCloud backup should carry your setup to a new iPhone automatically.</p>
+              <p>For a fresh setup or a partner’s phone, open the Kids tab and choose <strong>Export settings</strong>. AirDrop the resulting <code>.atthatage</code> file or save it to Files, then open it on the other iPhone.</p>
+              <p>The export contains kids, birthdays, and taught face signatures. It does not contain your photos.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="support-form-section support-shell" id="contact">
+        <div class="support-form-intro">
+          <p class="eyebrow">Still need help?</p>
+          <h2>Send a support request</h2>
+          <p>Tell me what happened and I’ll follow up by email. Your iOS and app versions can help me investigate, but they’re optional.</p>
+        </div>
+
+        <form class="support-form" id="support-form" name="at-that-age-support" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="at-that-age-support">
+          <input type="hidden" name="subject" data-remove-prefix value="New At That Age support request">
+          <p class="form-honeypot" aria-hidden="true">
+            <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="form-row">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+          </div>
+
+          <label>
+            What can I help with?
+            <select name="topic" required>
+              <option value="">Choose a topic</option>
+              <option>Photo access</option>
+              <option>Missing or incorrect matches</option>
+              <option>Teaching faces</option>
+              <option>Purchase or restore</option>
+              <option>Backup or transfer</option>
+              <option>Feedback or feature request</option>
+              <option>Something else</option>
+            </select>
+          </label>
+
+          <div class="form-row">
+            <label>
+              iOS version <span class="optional">Optional</span>
+              <input type="text" name="ios-version" inputmode="decimal" placeholder="For example, 18.6">
+            </label>
+            <label>
+              App version <span class="optional">Optional</span>
+              <input type="text" name="app-version" inputmode="decimal" placeholder="Shown in the Kids tab">
+            </label>
+          </div>
+
+          <label>
+            What happened?
+            <textarea name="message" rows="7" required placeholder="Describe what you expected and what happened instead."></textarea>
+          </label>
+
+          <div class="form-submit-row">
+            <button type="submit">Send request <span aria-hidden="true">→</span></button>
+            <p>Only the information you enter here is sent. Your photos and app data are never attached.</p>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="/at-that-age/">
+        <img src="/img/at-that-age-icon.png" width="36" height="36" alt="">
+        <span>At That Age</span>
+      </a>
+      <p><a href="/at-that-age/">About the app</a> · <a href="#support-form">Contact support</a></p>
+      <p>&copy; {{ page.date.getFullYear() }} Craig Sturgis</p>
+    </footer>
+    <script>
+      (() => {
+        const form = document.querySelector('#support-form');
+        const status = form.querySelector('.form-status');
+        const button = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          if (!form.reportValidity()) return;
+
+          button.disabled = true;
+          button.textContent = 'Sending…';
+          status.className = 'form-status';
+          status.textContent = '';
+
+          try {
+            const response = await fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(new FormData(form)).toString()
+            });
+            if (!response.ok) throw new Error('Submission failed');
+            form.reset();
+            status.className = 'form-status form-status-success';
+            status.textContent = 'Your request was sent. I’ll reply to the email address you provided.';
+          } catch (error) {
+            status.className = 'form-status form-status-error';
+            status.textContent = 'I couldn’t send that request. Please try again in a moment.';
+          } finally {
+            button.disabled = false;
+            button.innerHTML = 'Send request <span aria-hidden="true">→</span>';
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
