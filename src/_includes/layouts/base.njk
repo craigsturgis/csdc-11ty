@@ -9,13 +9,14 @@ blogPostSchema %}
             {% if title %}{{ title }} - {% endif %}Craig Sturgis</title>
 
         <!-- Open Graph Meta Tags -->
-        {% set defaultImage = "/img/Craig-Sturgis-headshot-2019.jpg" %}
+        {% set defaultImage = "/img/headshot-2026-neutral.webp" %}
         {% set ogImage = featuredimage or defaultImage %}
         <meta property="og:title" content="{% if title %}{{ title }}{% else %}Craig Sturgis{% endif %}">
         <meta property="og:type" content="{% if layout == 'post.njk' %}article{% else %}website{% endif %}">
         <meta property="og:image" content="{{ metadata.url }}{{ ogImage }}">
         <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-        <meta property="og:description" content="{{ description or 'Craig Sturgis - Product and Technology Leader' }}">
+        <meta property="og:description" content="{{ description or metadata.description }}">
+        <meta name="description" content="{{ description or metadata.description }}">
 
         <!-- Google Analytics -->
         {% if eleventy.env.CONTEXT == "production" %}
