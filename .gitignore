@@ -4,7 +4,6 @@ dist/
 
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 
 # Cache
@@ -29,4 +28,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Local Netlify folder
-.netlify 
+.netlify
+.vercel

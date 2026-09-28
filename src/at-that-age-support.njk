@@ -126,9 +126,10 @@ eleventyExcludeFromCollections: true
           <p>Tell me what happened and I’ll follow up by email. Your iOS and app versions can help me investigate, but they’re optional.</p>
         </div>
 
-        <form class="support-form" id="support-form" name="at-that-age-support" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form class="support-form" id="support-form" name="at-that-age-support" method="POST" action="{{ '/api/support' if eleventy.env.VERCEL else '/' }}" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="at-that-age-support">
           <input type="hidden" name="subject" data-remove-prefix value="New At That Age support request">
+          <input type="hidden" name="request-id" value="">
           <p class="form-honeypot" aria-hidden="true">
             <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
           </p>
@@ -196,6 +197,9 @@ eleventyExcludeFromCollections: true
         const form = document.querySelector('#support-form');
         const status = form.querySelector('.form-status');
         const button = form.querySelector('button[type="submit"]');
+        const requestId = form.querySelector('[name="request-id"]');
+        const isVercel = {{ 'true' if eleventy.env.VERCEL else 'false' }};
+        requestId.value = crypto.randomUUID();
 
         form.addEventListener('submit', async (event) => {
           event.preventDefault();
@@ -207,13 +211,19 @@ eleventyExcludeFromCollections: true
           status.textContent = '';
 
           try {
-            const response = await fetch('/', {
+            const payload = new FormData(form);
+            const response = await fetch(form.action, {
               method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams(new FormData(form)).toString()
+              headers: {
+                'Content-Type': isVercel ? 'application/json' : 'application/x-www-form-urlencoded'
+              },
+              body: isVercel
+                ? JSON.stringify(Object.fromEntries(payload))
+                : new URLSearchParams(payload).toString()
             });
             if (!response.ok) throw new Error('Submission failed');
             form.reset();
+            requestId.value = crypto.randomUUID();
             status.className = 'form-status form-status-success';
             status.textContent = 'Your request was sent. I’ll reply to the email address you provided.';
           } catch (error) {
