@@ -38,10 +38,11 @@ verified.
 
 ## Cloudflare DNS
 
-Netlify currently hosts the zone. RDAP identifies Tucows Domains Inc. as the
-registrar; the retail account may be with a Tucows reseller. Public DNS shows
-no DS record (DNSSEC is not enabled at the registrar). Netlify's zone shows 17
-records before adding Resend authentication. Cloudflare's assigned nameservers
+Netlify currently hosts the zone. WHOIS identifies Tucows Domains Inc. as the
+registrar and Hover as the reseller. The Hover account sign-in is needed for
+the eventual nameserver change. Public DNS shows no DS record (DNSSEC is not
+enabled at the registrar). Netlify's zone shows 17 records before adding
+Resend authentication. Cloudflare's assigned nameservers
 are `mina.ns.cloudflare.com` and `norman.ns.cloudflare.com`. Its inactive zone
 has been prepared with 19 records: two Vercel A records, eight CNAME records,
 four distinct Google MX records, and five TXT records. The difference from
