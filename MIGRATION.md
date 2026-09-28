@@ -10,13 +10,23 @@ The Vibecto Vercel project is `craigsturgis-com`, connected to
 Vercel is configured to redirect `www` to the apex with HTTP 308. Vercel asks
 for `76.76.21.21` on both hostnames. This is prepared, not yet live.
 
+The existing Vibecto Resend account now contains `craigsturgis.com` as a
+sending domain. Receiving in Resend is disabled so Google Workspace remains
+the inbound mail provider. Its required DKIM TXT record at
+`resend._domainkey` and CNAME records at `rsend` and `send` are present in
+both Netlify and Cloudflare DNS. Direct authoritative DNS queries returned
+matching values from both providers. Resend shows the sending domain as
+verified.
+
 ## Vercel
 
 - Import `craigsturgis/csdc-11ty` and deploy a preview using the repository's
   `vercel.json` settings.
 - Set `RESEND_API_KEY`, `SUPPORT_FROM_EMAIL`, and `SUPPORT_TO_EMAIL` on the
   Vercel project. Verify the sending domain in Resend before testing the form.
-  The destination should be `craig@craigsturgis.com`.
+  The destination is `craig@craigsturgis.com`; the sender is
+  `At That Age Support <support@craigsturgis.com>`. The nonsecret sender and
+  destination variables are set in Production and the migration branch Preview.
 - Compare the preview homepage, posts, feed, sitemap, images, privacy page,
   and support form against the live Netlify site. Submit a test support request
   and confirm its delivery and reply address.
@@ -31,12 +41,14 @@ for `76.76.21.21` on both hostnames. This is prepared, not yet live.
 Netlify currently hosts the zone. RDAP identifies Tucows Domains Inc. as the
 registrar; the retail account may be with a Tucows reseller. Public DNS shows
 no DS record (DNSSEC is not enabled at the registrar). Netlify's zone shows 17
-records. Cloudflare's assigned nameservers are `mina.ns.cloudflare.com` and
-`norman.ns.cloudflare.com`. Its inactive zone has been prepared with 16 records:
-two Vercel A records, six CNAME records, four distinct Google MX records, and
-four TXT records. The difference reflects Netlify's two proprietary web record
-types and a duplicate Google MX entry. Direct queries to Cloudflare's assigned
-nameserver confirm the Vercel web targets and representative mail records.
+records before adding Resend authentication. Cloudflare's assigned nameservers
+are `mina.ns.cloudflare.com` and `norman.ns.cloudflare.com`. Its inactive zone
+has been prepared with 19 records: two Vercel A records, eight CNAME records,
+four distinct Google MX records, and five TXT records. The difference from
+Netlify's original zone reflects replacement of its two proprietary web record
+types and omission of a duplicate Google MX entry. Direct queries to
+Cloudflare's assigned nameserver confirm the Vercel web targets and mail
+authentication records.
 Before changing nameservers:
 
 - Create the Cloudflare zone and compare its imported records against every
@@ -48,7 +60,7 @@ Before changing nameservers:
   The records imported by Cloudflare currently use automatic TTL; newly added
   records use one hour, matching Netlify.
 - Confirm the apex and `www` web records use `76.76.21.21`. Both are DNS only,
-  as are all six CNAME records.
+  as are all eight CNAME records.
 - Check mail, the site, `www` redirect, and `boostdev` using Cloudflare's
   assigned nameservers before changing delegation at the registrar.
 - Change registrar nameservers to Cloudflare's assigned pair. Keep the Netlify
