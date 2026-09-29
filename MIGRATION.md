@@ -1,74 +1,48 @@
-# Hosting migration: craigsturgis.com
+# craigsturgis.com hosting and DNS
 
-The live site remains on Netlify until the Vercel deployment, support form, and
-custom domains have been verified. Netlify DNS remains authoritative during the
-first hosting cutover. Cloudflare DNS is the second cutover.
+Migration completed September 28–29, 2026. This document covers only
+`craigsturgis.com` and `www.craigsturgis.com`.
 
-The Vibecto Vercel project is `craigsturgis-com`, connected to
-`craigsturgis/csdc-11ty`. Its staging URL is
-`https://craigsturgis-com.vercel.app`. Both custom hostnames are attached, and
-Vercel is configured to redirect `www` to the apex with HTTP 308. Vercel asks
-for `76.76.21.21` on both hostnames. This is prepared, not yet live.
+## Hosting
 
-The existing Vibecto Resend account now contains `craigsturgis.com` as a
-sending domain. Receiving in Resend is disabled so Google Workspace remains
-the inbound mail provider. Its required DKIM TXT record at
-`resend._domainkey` and CNAME records at `rsend` and `send` are present in
-both Netlify and Cloudflare DNS. Direct authoritative DNS queries returned
-matching values from both providers. Resend shows the sending domain as
-verified.
+The live site is the `craigsturgis-com` project in the Vibecto Vercel workspace,
+linked to `craigsturgis/csdc-11ty`. The apex is primary; `www` redirects to it
+with HTTP 308. Both hostnames have DNS-only A records pointing to
+`76.76.21.21`. The deployment uses the repository's `vercel.json` and the
+`/api/support` Vercel function. HTTPS, pages, feed, sitemap, redirects, and a
+delivered support form submission were verified after the hosting cutover.
 
-## Vercel
+The support form uses the existing Vibecto Resend account. Its API key has
+sending access restricted to `craigsturgis.com` and is stored as a Vercel
+secret. The sender is `At That Age Support <support@craigsturgis.com>` and the
+destination is `craig@craigsturgis.com`. Resend receiving is disabled; Google
+Workspace continues to receive mail.
 
-- Import `craigsturgis/csdc-11ty` and deploy a preview using the repository's
-  `vercel.json` settings.
-- Set `RESEND_API_KEY`, `SUPPORT_FROM_EMAIL`, and `SUPPORT_TO_EMAIL` on the
-  Vercel project. Verify the sending domain in Resend before testing the form.
-  The destination is `craig@craigsturgis.com`; the sender is
-  `At That Age Support <support@craigsturgis.com>`. The nonsecret sender and
-  destination variables are set in Production and the migration branch Preview.
-- Compare the preview homepage, posts, feed, sitemap, images, privacy page,
-  and support form against the live Netlify site. Submit a test support request
-  and confirm its delivery and reply address.
-- Keep the apex as primary and redirect `www` to it. Use the exact A/CNAME
-  targets shown by Vercel for this project.
-- Replace only the two Netlify web records in Netlify DNS with those Vercel
-  targets. Verify HTTPS, redirects, form delivery, feed, and mail before
-  considering the hosting move complete.
+## DNS
 
-## Cloudflare DNS
+Hover is the domain registrar. On September 29, Hover's four Netlify
+nameservers were replaced with `mina.ns.cloudflare.com` and
+`norman.ns.cloudflare.com`. Cloudflare reports the zone active. The `.com`
+parent and public resolvers at 1.1.1.1 and 8.8.8.8 returned the Cloudflare
+pair after the change. Public DNS returned the Vercel A record and Google
+Workspace MX records; the live apex served HTTP 200 from Vercel and `www`
+redirected to the apex over HTTPS.
 
-Netlify currently hosts the zone. WHOIS identifies Tucows Domains Inc. as the
-registrar and Hover as the reseller. The Hover account sign-in is needed for
-the eventual nameserver change. Public DNS shows no DS record (DNSSEC is not
-enabled at the registrar). Netlify's zone shows 17 records before adding
-Resend authentication. Cloudflare's assigned nameservers
-are `mina.ns.cloudflare.com` and `norman.ns.cloudflare.com`. Its inactive zone
-has been prepared with 19 records: two Vercel A records, eight CNAME records,
-four distinct Google MX records, and five TXT records. The difference from
-Netlify's original zone reflects replacement of its two proprietary web record
-types and omission of a duplicate Google MX entry. Direct queries to
-Cloudflare's assigned nameserver confirm the Vercel web targets and mail
-authentication records.
-Before changing nameservers:
+The Cloudflare Free zone contains 19 DNS records. The web A and all CNAME
+records are DNS only, so Vercel serves the website directly. The zone preserves
+the Google verification and mail records, SendGrid CNAMEs, `boostdev` records,
+and Resend's `resend._domainkey` TXT plus `rsend` and `send` CNAMEs. Direct
+authoritative queries to Cloudflare and Netlify returned matching Resend DKIM
+values. DNSSEC was unsigned at the registrar when the nameservers changed.
 
-- Create the Cloudflare zone and compare its imported records against every
-  record in Netlify's DNS dashboard. Cloudflare's automatic scan may miss
-  records.
-- Confirm all Google Workspace MX records, two Google verification TXT records,
-  SendGrid CNAMEs, the `mesmtp._domainkey` TXT record, and the `boostdev`
-  CNAME plus its `_lhr.boostdev` TXT record. Their values have been copied.
-  The records imported by Cloudflare currently use automatic TTL; newly added
-  records use one hour, matching Netlify.
-- Confirm the apex and `www` web records use `76.76.21.21`. Both are DNS only,
-  as are all eight CNAME records.
-- Check mail, the site, `www` redirect, and `boostdev` using Cloudflare's
-  assigned nameservers before changing delegation at the registrar.
-- Change registrar nameservers to Cloudflare's assigned pair. Keep the Netlify
-  DNS zone and site in place through propagation and post-cutover checks.
+Netlify's original zone had two proprietary web records, which were replaced
+with Vercel A records during the hosting cutover. It also had two identical
+`ALT3.ASPMX.L.GOOGLE.COM` MX rows and no `ALT4` row. Cloudflare contains one
+`ALT3` row; public DNS returned the same four distinct Google MX destinations.
+Review mail routing against current Google Workspace guidance before changing
+these records.
 
-The existing Netlify zone has five Google MX rows, including two identical
-`ALT3.ASPMX.L.GOOGLE.COM` entries and no `ALT4` entry. Public DNS returns
-only one `ALT3` result. Review this with Google Workspace guidance before
-deciding whether to correct it; do not silently copy the duplicate as a
-distinct mail destination.
+Keep the old Netlify DNS zone available through DNS cache expiry as a rollback
+source. If delegation must be reversed, restore the four former Netlify
+nameservers at Hover; both zones already direct the website to Vercel and
+preserve the same mail routing.
