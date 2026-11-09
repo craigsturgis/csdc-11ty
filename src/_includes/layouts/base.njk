@@ -6,12 +6,12 @@ blogPostSchema %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            {% if title %}{{ title }} - {% endif %}Craig Sturgis</title>
+            {% if seoTitle %}{{ seoTitle }}{% else %}{% if title %}{{ title }} - {% endif %}Craig Sturgis{% endif %}</title>
 
         <!-- Open Graph Meta Tags -->
         {% set defaultImage = "/img/headshot-2026-neutral.webp" %}
         {% set ogImage = featuredimage or defaultImage %}
-        <meta property="og:title" content="{% if title %}{{ title }}{% else %}Craig Sturgis{% endif %}">
+        <meta property="og:title" content="{% if seoTitle %}{{ seoTitle }}{% elif title %}{{ title }}{% else %}Craig Sturgis{% endif %}">
         <meta property="og:type" content="{% if layout == 'post.njk' %}article{% else %}website{% endif %}">
         <meta property="og:image" content="{{ metadata.url }}{{ ogImage }}">
         <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
@@ -76,6 +76,7 @@ blogPostSchema %}
         </main>
 
         <footer class="container mx-auto px-4 py-6 text-center">
+            <p class="mb-2"><a href="https://vibecto.ai/linkedin?source=craigsturgis" class="text-blue-600 dark:text-blue-400 hover:underline">Get the Vibecto monthly brief →</a></p>
             <p>&copy; {{ page.date.getFullYear() }} Craig Sturgis</p>
         </footer>
     </body>

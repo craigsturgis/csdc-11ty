@@ -125,7 +125,7 @@ Back to 2015.
 
 After some weeks of scrambling post launch, we did get back to doing things that didn’t scale and found many ways to shorten our feedback loop. We did some really clever experiments I’m proud of and got some great insights from customer interviews.
 
-But, it was too late. We had burned too much money and couldn’t recover enough momentum before we just [ran out of cash](/posts/swing-and-a-miss/).
+But, it was too late. We had burned too much money and couldn’t recover enough momentum before we just [ran out of cash](/swing-and-a-miss/).
 
 ## “It'll happen to yoooou”
 
@@ -145,4 +145,4 @@ Good luck!
 
 ---
 
-Building something ambitious and want my help increasing your odds of success and avoiding this and other mistakes? [Let's chat.](https://savvycal.com/craigsturgis/chat-from-site)
+Building something ambitious? [Let's talk.](https://vibecto.ai/contact?source=craigsturgis)
