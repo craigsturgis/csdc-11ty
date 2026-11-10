@@ -162,7 +162,7 @@ module.exports = function (eleventyConfig) {
     url: "https://craigsturgis.com",
     title: "Craig Sturgis",
     description:
-      "Craig Sturgis is a builder, operator, and founder of Vibecto, helping companies put AI agents to work across the business.",
+      "Craig Sturgis is the founder of Vibecto, which puts agents to work in founder-led businesses so you can grow faster, then hire better.",
     feed: {
       subtitle: "Notes from Craig Sturgis on building, operating, and the winding path.",
       filename: "feed.xml",

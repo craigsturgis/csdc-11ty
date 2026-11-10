@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Home
+seoTitle: Craig Sturgis, Founder, Vibecto
 ---
 
 <div class="prose dark:prose-invert lg:prose-xl mx-auto">
@@ -12,7 +13,7 @@ title: Home
     <section class="my-8 space-y-8 max-w-2xl mx-auto">
         <p class="text-xl">I am a curious human with more than 20 years of a winding <a href="#current-focus" class="text-blue-600 dark:text-blue-400 hover:underline">tech career</a> building products and leading teams—and a family I do my best to put first.</p>
 
-        <p class="text-xl">I founded <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://vibecto.ai">Vibecto</a> to help companies put agents to work across the whole business. We start with how the work actually gets done, find where agents can create real leverage, and build useful systems that stick.</p>
+        <p class="text-xl">I'm the founder of <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://vibecto.ai">Vibecto</a>, which puts agents to work in founder-led businesses, focused on software and marketing teams, so you can grow faster, then hire better.</p>
 
         <p class="text-xl">I occasionally write about what I'm learning here. My more current writing about agents, operating change, and the work itself lives in <a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://vibecto.ai/resources">Vibecto's insights</a>.</p>
     </section>
@@ -37,7 +38,6 @@ title: Home
     <section class="my-8" id="featured-posts">
         <h2 class="text-2xl mb-4">Featured Writing</h2>
         {% from "macros/post-card.njk" import postCard %}
-        {% from "macros/email-signup.njk" import emailSignup %}
         {% set featured = collections.posts | filterBy('data.featuredpost', true) %}
         {% if featured.length %}
             <div class="space-y-8 mt-4">
@@ -51,20 +51,27 @@ title: Home
         {% else %}
             <p>No featured posts yet.</p>
         {% endif %}
-        {{ emailSignup() }}
     </section>
     <section class="my-8" id="current-focus">
         <h2 class="text-2xl mb-4">Current Professional Focus</h2>
         {% from "macros/experience-item.njk" import experienceItem %}
-        <div class="flex justify-center">
+        <div class="flex flex-col items-center gap-12 md:gap-16">
             {{ experienceItem(
                 "/img/vibecto-lockup-ink.svg",
                 "Vibecto",
                 "Vibecto",
                 "Founder",
                 "2025 - Present",
-                "I help companies from five people to five hundred use agents in sales, operations, client delivery, marketing, finance, support, and software. I stay hands-on with a small number of companies at a time, helping them find where agents belong, build the first useful systems, and make the change stick.",
+                "Vibecto puts agents to work in founder-led businesses, focused on software and marketing teams, so you can grow faster, then hire better. The core of it is codifying your best people's judgement and expertise into agent workflows. I stay hands-on with a small number of companies at a time.",
                 "https://vibecto.ai"
+            ) }}
+            {{ experienceItem(
+                "/img/cs-logomark-tile.png",
+                "Craig Sturgis Services",
+                "Craig Sturgis Services",
+                "Fractional CTO | CPO",
+                "2021 - Present",
+                "Ongoing fractional CTO and CPO engagements for SaaS and tech-enabled services companies, including Probari, RootNote, and Uncovered. Earlier work spanned private equity owned SaaS companies and early-stage startups. New agent-adoption work runs through Vibecto."
             ) }}
         </div>
     </section>
@@ -73,15 +80,6 @@ title: Home
         {% from "macros/experience-item.njk" import experienceItem %}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {{ experienceItem(
-                "/img/prodyssey-logomark-dark.svg",
-                "Prodyssey",
-                "Prodyssey",
-                "Founder & CEO",
-                "2024 - 2025",
-                "I founded Prodyssey as an agency focused on helping SaaS companies grow profitably through their product, tech, data, and ai functions in a way that enables their revenue functions.",
-                "https://prodyssey.com"
-            ) }}
-            {{ experienceItem(
                 "/img/uncovered-logo.png",
                 "Uncovered",
                 "Uncovered",
@@ -89,15 +87,6 @@ title: Home
                 "2021 - Present", 
                 "I invested in and am an advisor for Uncovered, a public benefit corporation focused on bringing attention to cold cases and supporting victims' families. I advise on product and technology tactics and strategy.",
                 "https://uncovered.com"
-            ) }}
-
-            {{ experienceItem(
-                "/img/cs-logomark-tile.png",
-                "Craig Sturgis Services",
-                "Craig Sturgis Services",
-                "Fractional CTO | CPO",
-                "2021 - 2024",
-                "Solo Fractional CPO, CTO, and coach. I worked with a variety of private equity owned SaaS companies and early stage startups before deciding to narrow my focus and launch Prodyssey."
             ) }}
 
             {{ experienceItem(
